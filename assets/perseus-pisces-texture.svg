@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="core" cx="55%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#ffd8ff" stop-opacity="0.9" />
+      <stop offset="25%" stop-color="#f2a6ff" stop-opacity="0.78" />
+      <stop offset="55%" stop-color="#b44bff" stop-opacity="0.55" />
+      <stop offset="85%" stop-color="#24133f" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#060414" stop-opacity="1" />
+    </radialGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1440" height="900" fill="#05030d" />
+  <rect width="1440" height="900" fill="url(#core)" opacity="0.95" />
+  <g fill="#ffffff" fill-opacity="0.72" filter="url(#softGlow)">
+    <circle cx="300" cy="520" r="2" />
+    <circle cx="420" cy="600" r="1.4" />
+    <circle cx="510" cy="410" r="1.9" />
+    <circle cx="600" cy="480" r="3.2" />
+    <circle cx="680" cy="360" r="2.4" />
+    <circle cx="780" cy="320" r="1.8" />
+    <circle cx="850" cy="420" r="3.8" />
+    <circle cx="920" cy="510" r="2.1" />
+    <circle cx="1040" cy="460" r="1.6" />
+    <circle cx="1160" cy="550" r="3.5" />
+    <circle cx="1260" cy="440" r="2.8" />
+    <circle cx="340" cy="300" r="2.6" />
+    <circle cx="480" cy="280" r="1.7" />
+    <circle cx="620" cy="260" r="3.0" />
+    <circle cx="760" cy="240" r="2.2" />
+    <circle cx="900" cy="220" r="1.5" />
+    <circle cx="1040" cy="200" r="2.3" />
+    <circle cx="1180" cy="180" r="2.9" />
+    <circle cx="1340" cy="160" r="2.0" />
+    <circle cx="200" cy="700" r="2.4" />
+    <circle cx="360" cy="680" r="2.9" />
+    <circle cx="540" cy="640" r="2.2" />
+    <circle cx="720" cy="620" r="3.3" />
+    <circle cx="900" cy="610" r="2.7" />
+    <circle cx="1080" cy="640" r="2.1" />
+    <circle cx="1240" cy="680" r="1.8" />
+    <circle cx="1380" cy="720" r="2.6" />
+  </g>
+  <g fill="#ffdfff" fill-opacity="0.42" filter="url(#softGlow)">
+    <ellipse cx="520" cy="420" rx="280" ry="180" />
+    <ellipse cx="880" cy="500" rx="320" ry="200" />
+    <ellipse cx="700" cy="300" rx="260" ry="150" />
+  </g>
+  <g fill="#ffc6ff" fill-opacity="0.22">
+    <circle cx="220" cy="160" r="1.2" />
+    <circle cx="280" cy="220" r="1.0" />
+    <circle cx="340" cy="180" r="0.9" />
+    <circle cx="420" cy="140" r="1.1" />
+    <circle cx="480" cy="200" r="1.4" />
+    <circle cx="560" cy="160" r="1.2" />
+    <circle cx="620" cy="120" r="1.6" />
+    <circle cx="700" cy="160" r="1.1" />
+    <circle cx="760" cy="120" r="1.3" />
+    <circle cx="840" cy="140" r="1.2" />
+    <circle cx="920" cy="110" r="1.5" />
+    <circle cx="980" cy="160" r="1.0" />
+    <circle cx="1060" cy="140" r="1.3" />
+    <circle cx="1120" cy="100" r="1.1" />
+    <circle cx="1200" cy="140" r="1.4" />
+    <circle cx="1280" cy="120" r="1.2" />
+  </g>
+</svg>

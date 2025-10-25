@@ -1040,11 +1040,11 @@
             const context = canvas.getContext("2d");
             context.clearRect(0, 0, size, size);
             const center = size / 2;
-            
-            // Your brand colors
-            const brandColors = ['#920101', '#8D8C00', '#974C00'];
+
+            // Palette inspired by NASA's Perseus–Pisces capture
+            const brandColors = ['#4c1b6f', '#7c2d92', '#c959ff', '#ff9ce6', '#ffe6ff'];
             const selectedColor = brandColors[Math.floor(Math.random() * brandColors.length)];
-            
+
             // Convert hex to RGB for opacity variations
             const hex = selectedColor.replace('#', '');
             const r = parseInt(hex.substr(0, 2), 16);
@@ -1052,18 +1052,18 @@
             const b = parseInt(hex.substr(4, 2), 16);
 
             const baseGradient = context.createRadialGradient(center, center, size * 0.1, center, center, center);
-            baseGradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.75)`);
-            baseGradient.addColorStop(0.35, `rgba(${r}, ${g}, ${b}, 0.55)`);
-            baseGradient.addColorStop(0.6, `rgba(${r}, ${g}, ${b}, 0.32)`);
+            baseGradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.82)`);
+            baseGradient.addColorStop(0.35, `rgba(${r}, ${g}, ${b}, 0.58)`);
+            baseGradient.addColorStop(0.6, `rgba(${Math.min(255, r + 40)}, ${Math.min(255, g + 20)}, ${Math.min(255, b + 40)}, 0.28)`);
             baseGradient.addColorStop(1, "rgba(0, 0, 0, 0)");
             context.fillStyle = baseGradient;
             context.fillRect(0, 0, size, size);
 
-            const shardCount = 8 + Math.floor(Math.random() * 6);
+            const shardCount = 10 + Math.floor(Math.random() * 8);
             for (let i = 0; i < shardCount; i++) {
                 const shardX = center + (Math.random() - 0.5) * size * 0.55;
                 const shardY = center + (Math.random() - 0.5) * size * 0.35;
-                const shardRadius = size * (0.08 + Math.random() * 0.14);
+                const shardRadius = size * (0.1 + Math.random() * 0.18);
                 const shardGradient = context.createRadialGradient(
                     shardX,
                     shardY,
@@ -1072,8 +1072,8 @@
                     shardY,
                     shardRadius
                 );
-                shardGradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.65)`);
-                shardGradient.addColorStop(0.55, `rgba(${r}, ${g}, ${b}, 0.35)`);
+                shardGradient.addColorStop(0, `rgba(${Math.min(255, r + 20)}, ${Math.min(255, g + 10)}, ${Math.min(255, b + 20)}, 0.7)`);
+                shardGradient.addColorStop(0.55, `rgba(${r}, ${g}, ${b}, 0.38)`);
                 shardGradient.addColorStop(1, "rgba(0, 0, 0, 0)");
                 context.fillStyle = shardGradient;
                 context.beginPath();
@@ -1090,24 +1090,34 @@
         const baseParticleTexture = createSoftParticleTexture();
 
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x02040a);
-        scene.fog = new THREE.FogExp2(0x040714, 0.00035);
+        scene.background = new THREE.Color(0x040312);
+        scene.fog = new THREE.FogExp2(0x06081a, 0.00028);
 
-        // --- Perseus–Pisces style starfield / backplate (optional) ---
+        // Perseus–Pisces inspired backplate
         {
-          const PP_URL = ""; // e.g. "https://yourcdn/perseus-pisces-8k.jpg"
-          if (PP_URL) {
-            new THREE.TextureLoader().load(PP_URL, (tx) => {
-              tx.colorSpace = THREE.SRGBColorSpace;
+          const PP_URL = "./assets/perseus-pisces-texture.svg";
+          const loader = new THREE.TextureLoader();
+          loader.load(
+            PP_URL,
+            (texture) => {
+              texture.colorSpace = THREE.SRGBColorSpace;
               const geo = new THREE.SphereGeometry(3000, 64, 64);
               const mat = new THREE.MeshBasicMaterial({
-                map: tx, side: THREE.BackSide, transparent: true, opacity: 0.55
+                map: texture,
+                side: THREE.BackSide,
+                transparent: true,
+                opacity: 0.62,
+                depthWrite: false
               });
               const dome = new THREE.Mesh(geo, mat);
               dome.rotation.y = Math.PI * 0.33;
               scene.add(dome);
-            });
-          }
+            },
+            undefined,
+            (err) => {
+              console.warn('Failed to load Perseus–Pisces texture', err);
+            }
+          );
         }
 
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
@@ -1362,17 +1372,17 @@
             
             // Custom styling for galaxy labels
             el.style.position = "absolute"; // Required for backdropFilter
-            el.style.color = "#fff4e7"; // White text
+            el.style.color = "#fff4f9";
             el.style.fontSize = "14px";
             el.style.fontWeight = "600";
             el.style.letterSpacing = "0";
             el.style.textTransform = "capitalize";
-            el.style.textShadow = "0 0 10px rgba(0,0,0, 0.8)"; // Blue glow
-            el.style.background = "rgba(0,0,0, 0.8)"; // Dark background
-            el.style.padding = "8px 12px";
-            el.style.borderRadius = "50px";
-            el.style.backdropFilter = "blur(8px)"; // Standard
-            el.style.webkitBackdropFilter = "blur(8px)"; // Safari support
+            el.style.textShadow = "0 0 14px rgba(255, 180, 255, 0.75)";
+            el.style.background = "linear-gradient(135deg, rgba(34, 10, 52, 0.8) 0%, rgba(122, 54, 164, 0.65) 100%)";
+            el.style.padding = "8px 14px";
+            el.style.borderRadius = "999px";
+            el.style.backdropFilter = "blur(12px)"; // Standard
+            el.style.webkitBackdropFilter = "blur(12px)"; // Safari support
             el.style.isolation = "isolate"; // Create stacking context
             el.style.willChange = "transform"; // Optimize rendering
             
@@ -1504,11 +1514,16 @@
           // Label
           const label = createLabel(name);
           label.dataset.target = name;
+          label.style.border = `1px solid ${coreColor.clone().lerp(new THREE.Color('#ffffff'), 0.35 * intensity).getStyle()}`;
+          label.style.boxShadow = `0 0 24px rgba(255, 182, 255, ${0.25 + 0.3 * intensity})`;
+          label.style.opacity = String(0.72 + 0.18 * intensity);
 
           // Lighting tuned to intensity
           const pointLight = new THREE.PointLight(coreColor, 2.6 + 2.4 * intensity, 600 + 200 * intensity, 2.4);
           pointLight.position.set(0, 0, 0);
           group.add(pointLight);
+
+          group.userData = { intensity, palette };
 
           // Store in our registry (preserve interface for rest of code)
           galaxyGroups.set(name, {
@@ -1517,6 +1532,8 @@
             baseColor: base.clone(),
             color: coreColor.clone(),
             dataset: null,
+            palette,
+            intensity,
             // Add missing properties for compatibility
             stars: null, // Not used in new structure
             swirl: null, // Not used in new structure
@@ -1537,18 +1554,18 @@
             console.log(`Galaxy ${name} position:`, entry.group.position);
         });
 
-        const ambientLight = new THREE.AmbientLight(0x5f6f9f, 0.48);
+        const ambientLight = new THREE.AmbientLight(0x7a4fb0, 0.52);
         scene.add(ambientLight);
 
-        const rimLight = new THREE.DirectionalLight(0x9fd6ff, 0.75);
+        const rimLight = new THREE.DirectionalLight(0xd1a8ff, 0.72);
         rimLight.position.set(120, 260, 180);
         scene.add(rimLight);
 
-        const warmLight = new THREE.DirectionalLight(0xffbf80, 0.58);
+        const warmLight = new THREE.DirectionalLight(0xff9abf, 0.6);
         warmLight.position.set(-220, -160, -180);
         scene.add(warmLight);
 
-        const coolFillLight = new THREE.DirectionalLight(0x3b58ff, 0.32);
+        const coolFillLight = new THREE.DirectionalLight(0x4f8bff, 0.34);
         coolFillLight.position.set(-140, 120, 260);
         scene.add(coolFillLight);
 
@@ -1627,7 +1644,7 @@
         const farStarField = new THREE.Points(farStarFieldGeometry, farStarFieldMaterial);
         scene.add(farStarField);
 
-        const connectionBaseColor = new THREE.Color(0x6bc8ff);
+        const connectionBaseColor = new THREE.Color(0xc9a6ff);
         const connectionLines = new THREE.Group();
         superclusterGroup.add(connectionLines);
         
@@ -1675,19 +1692,28 @@
               // Slimmer tube for ethereal axon look
               const geometry = new THREE.TubeGeometry(curve, 128, 0.9, 24, false);
 
-              // Blend source/target colors
+              // Blend source/target colors and derive intensity
               const sourceColor = source.core.material.color.clone();
               const targetColor = target.core.material.color.clone();
-              const blended = sourceColor.lerp(targetColor, 0.5);
+              const blended = sourceColor.lerp(targetColor, 0.5).lerp(new THREE.Color('#ffe6ff'), 0.2);
+
+              const sourceIntensity = source.intensity ?? source.group.userData?.intensity ?? 0;
+              const targetIntensity = target.intensity ?? target.group.userData?.intensity ?? 0;
+              const connectionIntensity = Math.max(0.15, (sourceIntensity + targetIntensity) * 0.5);
+              const baseOpacity = 0.26 + 0.48 * connectionIntensity;
+              const auraStrength = 0.24 + 0.55 * connectionIntensity;
+              const highlightGain = 0.18 + 0.32 * connectionIntensity;
 
               // Neuronal glow shader: fresnel-ish rim + flowing head, soft aura
               const flowMaterial = new THREE.ShaderMaterial({
                 uniforms: {
                   uColor: { value: blended },
-                  uOpacity: { value: 0.36 },
+                  uOpacity: { value: baseOpacity },
                   uTime: { value: Math.random() },
-                  uAura: { value: 0.35 },
-                  uPulse: { value: 0.0 }
+                  uAura: { value: auraStrength },
+                  uPulse: { value: 0.0 },
+                  uHighlight: { value: 0.0 },
+                  uHighlightGain: { value: highlightGain }
                 },
                 vertexShader: `
                   varying vec3 vNormal;
@@ -1704,6 +1730,8 @@
                   uniform float uTime;
                   uniform float uAura;
                   uniform float uPulse;
+                  uniform float uHighlight;
+                  uniform float uHighlightGain;
                   varying vec3 vNormal;
                   varying vec2 vUv;
 
@@ -1717,8 +1745,9 @@
                     float aura = uAura * (0.55 + 0.45 * sin(6.2831 * (uTime*0.4 + vUv.x)));
                     // Combine
                     vec3 base = uColor * (0.35 + 0.35 * fres + aura);
-                    vec3 highlight = mix(base, vec3(1.0), 0.35 * head + 0.25 * uPulse);
-                    float alpha = uOpacity * (0.45 + 0.4 * fres + 0.35 * head + 0.35 * uPulse);
+                    float highlightStrength = clamp((0.3 + uHighlightGain) * head + 0.22 * uPulse + uHighlight, 0.0, 1.5);
+                    vec3 highlight = mix(base, vec3(1.0), clamp(highlightStrength, 0.0, 1.0));
+                    float alpha = uOpacity * (0.4 + 0.42 * fres + 0.35 * head + 0.3 * uPulse + 0.4 * uHighlight);
                     gl_FragColor = vec4(highlight, alpha);
                   }
                 `,
@@ -1732,9 +1761,12 @@
                 start: data.name,
                 end: targetName,
                 baseColor: blended.clone(),
-                baseOpacity: 0.36,
-                targetOpacity: 0.36,
-                flowSpeed: 0.14 + Math.random() * 0.16,
+                baseOpacity,
+                targetOpacity: baseOpacity,
+                baseAura: auraStrength,
+                flowSpeed: 0.14 + connectionIntensity * 0.18 + Math.random() * 0.1,
+                highlightGain,
+                intensity: connectionIntensity
               };
               connectionLines.add(mesh);
               connectionFlowEntries.push(mesh);
@@ -1744,14 +1776,17 @@
               for (let i = 0; i < pearlCount; i++) {
                 const pearlGeo = new THREE.SphereGeometry(1.8, 16, 16);
                 const pearlMat = new THREE.MeshBasicMaterial({
-                  color: blended.clone().lerp(new THREE.Color("#ffffff"), 0.7),
-                  transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, depthWrite: false
+                  color: blended.clone().lerp(new THREE.Color("#ffffff"), 0.72 + 0.12 * connectionIntensity),
+                  transparent: true,
+                  opacity: 0.6 + 0.3 * connectionIntensity,
+                  blending: THREE.AdditiveBlending,
+                  depthWrite: false
                 });
                 const pearl = new THREE.Mesh(pearlGeo, pearlMat);
                 pearl.userData = {
                   curve,
                   t: Math.random(),
-                  speed: 0.15 + Math.random() * 0.25
+                  speed: 0.12 + connectionIntensity * 0.25 + Math.random() * 0.12
                 };
                 pearlsGroup.add(pearl);
               }
@@ -1767,7 +1802,7 @@
         const infoMetricsList = document.getElementById("infoMetrics");
         const defaultSubtitle = "Select a Stream Category";
         const defaultIntroText =
-            "Explore the connective tissue of Visible Light AI's intelligence streams. Click any galaxy to learn how each stream powers the constellation of insights.";
+            "Explore the ten galaxy groups woven from Visible Light AI's intelligence streams. Select any luminous cluster to watch how the data currents braid through the supercluster.";
 
         function appendMetric(list, title, detail) {
             if (!list) return;
@@ -1843,34 +1878,44 @@
         let hoveredGalaxy = null;
         let activeGalaxy = null;
 
-        function setGalaxyGlow(name, intensity) {
+        function setGalaxyGlow(name, extraIntensity = 0) {
           const entry = galaxyGroups.get(name);
           if (!entry) return;
 
+          const baseIntensity = entry.intensity ?? 0;
+          const total = Math.min(1.5, baseIntensity * 0.65 + extraIntensity);
+
           // Mother
-          entry.core.material.emissiveIntensity = 1.1 + intensity * 1.6;
-          entry.halo.material.opacity = 0.18 + intensity * 0.5;
-          if (entry.disc)  entry.disc.material.opacity  = 0.22 + intensity * 0.4;
-          if (entry.orbit) entry.orbit.material.opacity = 0.16 + intensity * 0.34;
+          entry.core.material.emissiveIntensity = 0.95 + total * 1.85;
+          entry.halo.material.opacity = 0.18 + total * 0.5;
+          if (entry.disc)  entry.disc.material.opacity  = 0.22 + total * 0.4;
+          if (entry.orbit) entry.orbit.material.opacity = 0.16 + total * 0.34;
           if (entry.pointLight) {
-            entry.pointLight.intensity = 2.6 + intensity * 3.0;
-            entry.pointLight.distance  = 560 + intensity * 200;
+            entry.pointLight.intensity = 2.4 + total * 3.1;
+            entry.pointLight.distance  = 540 + total * 240;
+            entry.pointLight.decay     = 2.2;
+          }
+
+          // Label glow
+          if (entry.label) {
+            entry.label.style.opacity = String(0.65 + Math.min(0.35, total * 0.4));
+            entry.label.style.filter = `drop-shadow(0 0 ${12 + total * 22}px rgba(255, 200, 255, ${0.25 + 0.35 * total}))`;
           }
 
           // Children
           (entry.children || []).forEach(ch => {
             const m = ch.material;
             if (m && m.emissive) {
-              m.emissiveIntensity = 0.85 + intensity * 1.3;
+              m.emissiveIntensity = 0.75 + total * 1.45;
             }
             const halo = ch.children.find(n => n.geometry && n.material && n.material.transparent);
             if (halo && halo.material) {
-              halo.material.opacity = 0.16 + intensity * 0.35;
+              halo.material.opacity = 0.16 + total * 0.35;
               halo.material.needsUpdate = true;
             }
             const sparkle = ch.children.find(n => n.isPoints);
             if (sparkle && sparkle.material) {
-              sparkle.material.opacity = 0.38 + intensity * 0.42;
+              sparkle.material.opacity = 0.34 + total * 0.46;
               sparkle.material.needsUpdate = true;
             }
           });
@@ -1916,6 +1961,7 @@
                 const material = child.material;
                 if (material?.uniforms) {
                     material.uniforms.uColor.value.copy(child.userData.baseColor ?? connectionBaseColor);
+                    material.uniforms.uAura.value = child.userData.baseAura ?? material.uniforms.uAura.value;
                     material.uniforms.uHighlight.value = 0;
                     child.userData.targetOpacity = child.userData.baseOpacity ?? material.uniforms.uOpacity.value;
                 }
@@ -1944,7 +1990,9 @@
                     const highlightEntry = galaxyGroups.get(name);
                     if (highlightEntry && child.material?.uniforms) {
                         child.material.uniforms.uColor.value.copy(highlightEntry.core.material.color);
-                        child.userData.targetOpacity = Math.min(1, (child.userData.baseOpacity || 0.36) + 0.55);
+                        child.material.uniforms.uAura.value = (child.userData.baseAura || 0.4) + 0.35;
+                        child.material.uniforms.uHighlight.value = Math.min(0.9, (child.userData.highlightGain || 0.3) + 0.35);
+                        child.userData.targetOpacity = Math.min(1, (child.userData.baseOpacity || 0.36) + 0.55 + 0.2 * (highlightEntry.intensity || 0));
                     }
                 }
             });
@@ -2216,6 +2264,9 @@
                 const targetOpacity = mesh.userData?.targetOpacity ?? mesh.userData?.baseOpacity ?? material.uniforms.uOpacity.value;
                 material.uniforms.uOpacity.value = THREE.MathUtils.lerp(material.uniforms.uOpacity.value, targetOpacity, 0.08);
                 material.uniforms.uPulse.value = 0.25 + 0.25 * Math.sin(time * 0.0015);
+                const baseAura = mesh.userData?.baseAura ?? material.uniforms.uAura.value;
+                material.uniforms.uAura.value = THREE.MathUtils.lerp(material.uniforms.uAura.value, baseAura, 0.06);
+                material.uniforms.uHighlight.value = THREE.MathUtils.lerp(material.uniforms.uHighlight.value, 0, 0.05);
             });
 
             // Move axon pearls along their curves
