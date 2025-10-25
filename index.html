@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visible Light AI Supercluster</title>
+    <link rel="stylesheet" type="text/css" href="https://supercluster.visiblelight.ai/styles.css" />
+</head>
+<body>
+    <div
+        id="vlSuperclusterRoot"
+        class="vl-supercluster-root vl-supercluster"
+        data-login-path="/supercluster-ai-constellation-login/"
+    >
+
+
+        <!-- Visible Light Supercluster Overlay -->
+        <div class="vl-supercluster-overlay">
+            <!-- Top Left: Logo and Client Info -->
+            <div class="vl-header">
+                <div class="vl-logo">
+                    <img src="https://visiblelight.ai/wp-content/uploads/2025/10/visible-light-icon-logo.svg" alt="Visible Light Icon Logo" />
+                </div>
+                <div class="vl-client-greeting">
+                    <h2>Hello, <span id="clientName">Client</span><span class="dropdown-arrow" id="clientDropdownArrow"><img src="https://visiblelight.ai/wp-content/uploads/2025/08/downarrow.svg" alt="droddown arrow"></span></h2>
+                </div>
+            </div>
+
+            <!-- Main Navigation Menu -->
+            <nav class="vl-main-menu">
+                <ul>
+                    <li class="active">
+                        <a href="#" data-section="supercluster">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/supercluster-loader.svg" alt="Supercluster Icon" /></span>
+                            <span class="label">Supercluster</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="web-infra">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/web-and-infra-icon.svg" alt="Web & Infra Icon" /></span>
+                            <span class="label">Web & Infra</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="content">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/content-manegement-and-structure-icon.svg" alt="content icon" /></span>
+                            <span class="label">Content</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="search-intel">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/supercluster-search-icon-1.svg" alt="search intel icon" /></span>
+                            <span class="label">Search Intel</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="reporting">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/supercluster-reporting-icon.svg" alt="reporting icon" /></span>
+                            <span class="label">Reporting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="marketing-ads">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/supercluster-search-icon-1.svg" alt="marketing and campaigns icon" /></span>
+                            <span class="label">Marketing & Ads</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="ecommerce">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/supercluster-search-icon-1.svg" alt="e-commerce and conversions icon" /></span>
+                            <span class="label">E-Commerce</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="security-compliance">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/supercluster-search-icon-1.svg" alt="security and compliance icon" /></span>
+                            <span class="label">Security & Compliance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="cloudops">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/supercluster-search-icon-1.svg" alt="cloudops icon" /></span>
+                            <span class="label">CloudOps</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="user-identity">
+                            <span class="icon"><img width="49" height="46" decoding="async" src="https://visiblelight.ai/wp-content/uploads/2025/07/seamless-collaboration-icon.svg" alt="user identity icon" class="wp-image-541" style="aspect-ratio:1.0606060606060606;object-fit:cover;width:35px;height:auto"></span>
+                            <span class="label">User & Identity Layer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="competitive">
+                            <span class="icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/supercluster-search-icon-1.svg" alt="competitive icon" /></span>
+                            <span class="label">Competitive</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Bottom Left: License Key, Connection Status and Luna Chat -->
+            <div class="vl-bottom-left">
+                <div class="vl-license-key">
+                    <div class="license-label">License Key</div>
+                    <div class="license-value" id="licenseKeyDisplay">Loading...</div>
+                </div>
+                <div class="vl-connection-status">
+                    <div class="status-indicator">
+                        <span class="status-icon" id="connectionIcon"><img src="https://visiblelight.ai/wp-content/uploads/2025/10/checkmark.svg" alt="check mark" /></span>
+                    </div>
+                    <div class="status-text">
+                        <p><span class="status-label">Hub Status: </span>
+                        <span class="status-value" id="connectionStatus">Active</span></p>
+                    </div>
+                </div>
+                <div class="vl-luna-chat">
+                    <button class="luna-chat-button" id="lunaChatButton">
+                        <span class="chat-icon"><img src="https://visiblelight.ai/wp-content/uploads/2025/07/luna-headshot.png" alt="Luna AI Profile Photo" /></span>
+                        <span class="chat-text">Chat with Luna</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Right: Controls -->
+            <div class="vl-controls">
+                <button class="control-btn" id="controlLeft" title="Move Left">
+                    <span class="icon">←</span>
+                </button>
+                <button class="control-btn" id="controlRight" title="Move Right">
+                    <span class="icon">→</span>
+                </button>
+                <button class="control-btn" id="controlZoomIn" title="Zoom In">
+                    <span class="icon">+</span>
+                </button>
+                <button class="control-btn" id="controlZoomOut" title="Zoom Out">
+                    <span class="icon">−</span>
+                </button>
+                <button class="control-btn" id="controlToggleConnections" title="Toggle Connections">
+                    <span class="icon" id="connectionsIcon">👁</span>
+                </button>
+                <button class="control-btn" id="controlSpecial" title="Special Effect">
+                    <span class="icon">✨</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Client Dropdown Lightbox -->
+        <div class="client-dropdown-lightbox" id="clientDropdownLightbox" style="display: none;">
+            <div class="client-dropdown-content">
+                <div class="client-dropdown-item" id="accountSettings">
+                    <span class="dropdown-icon">⚙️</span>
+                    <span class="dropdown-text">Account Settings</span>
+                </div>
+                <div class="client-dropdown-item" id="logoutOption">
+                    <span class="dropdown-icon">🚪</span>
+                    <span class="dropdown-text">Log Out</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logout Confirmation Modal -->
+        <div class="logout-modal" id="logoutModal" style="display: none;">
+            <div class="logout-modal-content">
+                <h3>Log Out</h3>
+                <p>Are you sure you want to log out of Visible Light?</p>
+                <div class="logout-modal-buttons">
+                    <button class="logout-cancel" id="logoutCancel">No, stay logged in</button>
+                    <button class="logout-confirm" id="logoutConfirm">Yes, log out now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+                "three/examples/jsm/controls/OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/controls/OrbitControls.js"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import * as THREE from "three";
+        import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+        // Get license key from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const licenseKey = urlParams.get('license') || urlParams.get('lic') || urlParams.get('vl_license') || urlParams.get('vl_license_key') || '';
+        
+        console.log('License key from URL:', licenseKey);
+
+        // Data fetching from VL Hub
+        let constellationData = null;
+        let dataFetchError = null;
+        
+        // Connections visibility state
+        let connectionsVisible = true;
+
+        async function fetchConstellationData() {
+            try {
+                const endpoint = 'https://visiblelight.ai/wp-json/vl-hub/v1/constellation';
+                const url = licenseKey ? `${endpoint}?license=${encodeURIComponent(licenseKey)}` : endpoint;
+                
+                console.log('Fetching constellation data from:', url);
+                
+                // Update debug info
+                updateDebugInfo(`Fetching: ${url}`);
+                
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+
+                console.log('Response status:', response.status);
+                console.log('Response headers:', [...response.headers.entries()]);
+
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    console.error('Error response body:', errorText);
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}\nResponse: ${errorText}`);
+                }
+
+                const data = await response.json();
+                console.log('Constellation data received:', data);
+                updateDebugInfo(`Success: ${data.total_clients || 0} clients found`);
+                return data;
+            } catch (error) {
+                console.error('Failed to fetch constellation data:', error);
+                dataFetchError = error.message;
+                updateDebugInfo(`Error: ${error.message}`);
+                return null;
+            }
+        }
+
+        function updateDebugInfo(message) {
+            const debugEl = document.getElementById('debugInfo');
+            if (debugEl) {
+                const timestamp = new Date().toLocaleTimeString();
+                debugEl.innerHTML = `[${timestamp}] ${message}`;
+            }
+        }
+
+        // Function to update galaxy data with real VL Hub data
+        function updateGalaxyDataWithRealData(clientData) {
+            console.log('Updating galaxy data with real data:', clientData);
+            
+            // Update galaxy data with real metrics
+            galaxyData.forEach(galaxy => {
+                const matchingCategory = clientData.categories?.find(cat => 
+                    galaxy.datasetSlugs.some(slug => 
+                        cat.name.toLowerCase().includes(slug.toLowerCase()) ||
+                        cat.name.toLowerCase().includes('infrastructure') && slug === 'infrastructure' ||
+                        cat.name.toLowerCase().includes('content') && slug === 'content' ||
+                        cat.name.toLowerCase().includes('security') && slug === 'security' ||
+                        cat.name.toLowerCase().includes('plugins') && slug === 'plugins' ||
+                        cat.name.toLowerCase().includes('users') && slug === 'users' ||
+                        cat.name.toLowerCase().includes('ai') && slug === 'ai' ||
+                        cat.name.toLowerCase().includes('sessions') && slug === 'sessions' ||
+                        cat.name.toLowerCase().includes('integrations') && slug === 'integrations'
+                    )
+                );
+
+                if (matchingCategory) {
+                    galaxy.metrics = {
+                        categoryName: matchingCategory.name,
+                        clientName: clientData.client,
+                        nodesCount: matchingCategory.nodes?.length || 0,
+                        topNodes: matchingCategory.nodes?.slice(0, 4).map(node => ({
+                            label: node.label,
+                            detail: node.detail
+                        })) || []
+                    };
+                    galaxy.description = `Real-time data from ${clientData.client}: ${matchingCategory.nodes?.length || 0} active signals`;
+                }
+            });
+        }
+
+        // Update verification panel with data
+        function updateVerificationPanel(data, error = null) {
+            const licenseEl = document.getElementById('verificationLicense');
+            const endpointEl = document.getElementById('verificationEndpoint');
+            const statusEl = document.getElementById('verificationStatus');
+            const clientsEl = document.getElementById('verificationClients');
+            const lastUpdateEl = document.getElementById('verificationLastUpdate');
+            const dataEl = document.getElementById('verificationData');
+
+            if (licenseEl) licenseEl.textContent = licenseKey || 'No license key';
+            if (endpointEl) endpointEl.textContent = '/wp-json/vl-hub/v1/constellation';
+            
+            if (error) {
+                if (statusEl) statusEl.textContent = `Error: ${error}`;
+                if (statusEl) statusEl.style.color = '#f85149';
+                if (clientsEl) clientsEl.textContent = 'Failed';
+                if (lastUpdateEl) lastUpdateEl.textContent = new Date().toLocaleTimeString();
+                if (dataEl) dataEl.textContent = `Error: ${error}`;
+            } else if (data) {
+                if (statusEl) statusEl.textContent = 'Connected';
+                if (statusEl) statusEl.style.color = '#56d364';
+                if (clientsEl) clientsEl.textContent = data.total_clients || 0;
+                if (lastUpdateEl) lastUpdateEl.textContent = new Date().toLocaleTimeString();
+                if (dataEl) dataEl.textContent = JSON.stringify(data, null, 2);
+            } else {
+                if (statusEl) statusEl.textContent = 'No data';
+                if (statusEl) statusEl.style.color = '#f2cc60';
+                if (clientsEl) clientsEl.textContent = '0';
+                if (lastUpdateEl) lastUpdateEl.textContent = new Date().toLocaleTimeString();
+                if (dataEl) dataEl.textContent = 'No data received';
+            }
+        }
+
+        // Toggle verification panel
+        function toggleVerificationPanel() {
+            const content = document.getElementById('verificationContent');
+            const button = document.getElementById('toggleVerification');
+            if (content && button) {
+                const isVisible = content.style.display !== 'none';
+                content.style.display = isVisible ? 'none' : 'block';
+                content.classList.toggle('show', !isVisible);
+                button.textContent = isVisible ? 'Show Details' : 'Hide Details';
+            }
+        }
+
+        // Manual sync function
+        async function syncFromHub() {
+            const syncBtn = document.getElementById('syncFromHub');
+            if (syncBtn) {
+                syncBtn.disabled = true;
+                syncBtn.textContent = 'Syncing...';
+            }
+
+            updateDebugInfo('Manual sync initiated...');
+            updateVerificationPanel(null, 'Syncing...');
+
+            try {
+                const data = await fetchConstellationData();
+                constellationData = data;
+                updateVerificationPanel(data, dataFetchError);
+                
+                if (data && data.clients && data.clients.length > 0) {
+                    updateGalaxyDataWithRealData(data.clients[0]);
+                    updateDebugInfo(`Sync complete: ${data.total_clients} clients loaded`);
+                } else {
+                    updateDebugInfo('Sync complete: No client data found');
+                }
+            } catch (error) {
+                updateDebugInfo(`Sync failed: ${error.message}`);
+                updateVerificationPanel(null, error.message);
+            } finally {
+                if (syncBtn) {
+                    syncBtn.disabled = false;
+                    syncBtn.textContent = 'Sync From Hub';
+                }
+            }
+        }
+
+        // Add event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleBtn = document.getElementById('toggleVerification');
+            const syncBtn = document.getElementById('syncFromHub');
+            
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', toggleVerificationPanel);
+            }
+            
+            if (syncBtn) {
+                syncBtn.addEventListener('click', syncFromHub);
+            }
+
+            // Initialize Visible Light overlay
+            initializeVLOverlay();
+            
+            // Also refresh client name after a delay to ensure constellation data is loaded
+            setTimeout(async () => {
+                console.log('Delayed client name refresh...');
+                await refreshClientName();
+            }, 2000);
+        });
+
+        // Initialize Visible Light overlay functionality
+        async function initializeVLOverlay() {
+            // Update client name from license key
+            await updateClientName();
+            
+            // Update license key display
+            updateLicenseKeyDisplay();
+            
+            // Setup menu navigation
+            setupMenuNavigation();
+            
+            // Setup connection status
+            setupConnectionStatus();
+            
+            // Setup control buttons
+            setupControlButtons();
+            
+            // Setup client dropdown
+            setupClientDropdown();
+        }
+
+        // Update client name from license key
+        async function updateClientName() {
+            const clientNameEl = document.getElementById('clientName');
+            if (clientNameEl) {
+                console.log('Starting client name update process...');
+                
+                // First priority: Try to get user data from constellation data
+                if (constellationData && constellationData.clients && constellationData.clients.length > 0) {
+                    const clientData = constellationData.clients[0];
+                    console.log('Checking constellation data for user info:', clientData);
+                    
+                    // Check if there's user data in the constellation response
+                    if (clientData.user_data && clientData.user_data.display_name) {
+                        const firstName = clientData.user_data.display_name.split(' ')[0];
+                        console.log('Using first name from constellation user_data:', firstName);
+                        clientNameEl.textContent = firstName;
+                        return;
+                    }
+                    
+                    // Check if there's a user_id in the constellation data
+                    if (clientData.user_id) {
+                        try {
+                            console.log('Trying to get user data by user_id:', clientData.user_id);
+                            const response = await fetch(`/wp-json/wp/v2/users/${clientData.user_id}`, {
+                                method: 'GET',
+                                credentials: 'same-origin'
+                            });
+                            
+                            if (response.ok) {
+                                const userData = await response.json();
+                                console.log('User data by user_id:', userData);
+                                if (userData && userData.name) {
+                                    const firstName = userData.name.split(' ')[0];
+                                    console.log('Using first name from user_id lookup:', firstName);
+                                    clientNameEl.textContent = firstName;
+                                    return;
+                                }
+                            }
+                        } catch (error) {
+                            console.log('User_id lookup error:', error);
+                        }
+                    }
+                }
+
+                // Second priority: Try to get current user's display name using custom endpoint
+                try {
+                    console.log('Trying custom endpoint: /wp-json/myplugin/v1/current-user');
+                    const response = await fetch('/wp-json/myplugin/v1/current-user', {
+                        method: 'GET',
+                        credentials: 'same-origin'
+                    });
+                    
+                    console.log('Custom endpoint response status:', response.status);
+                    if (response.ok) {
+                        const userData = await response.json();
+                        console.log('Custom endpoint user data:', userData);
+                        if (userData && userData.display_name) {
+                            // Extract first name from display_name
+                            const firstName = userData.display_name.split(' ')[0];
+                            console.log('Using first name from custom endpoint:', firstName);
+                            clientNameEl.textContent = firstName;
+                            return;
+                        }
+                    }
+                } catch (error) {
+                    console.log('Custom endpoint error:', error);
+                }
+
+                // Second priority: Try default WordPress users endpoint
+                try {
+                    console.log('Trying WordPress API: /wp-json/wp/v2/users/me');
+                    const response = await fetch('/wp-json/wp/v2/users/me', {
+                        method: 'GET',
+                        credentials: 'same-origin'
+                    });
+                    
+                    console.log('WordPress API response status:', response.status);
+                    if (response.ok) {
+                        const userData = await response.json();
+                        console.log('WordPress API user data:', userData);
+                        if (userData && userData.name) {
+                            // Extract first name from name field
+                            const firstName = userData.name.split(' ')[0];
+                            console.log('Using first name from WordPress API:', firstName);
+                            clientNameEl.textContent = firstName;
+                            return;
+                        }
+                    } else {
+                        const errorText = await response.text();
+                        console.log('WordPress API error response:', errorText);
+                    }
+                } catch (error) {
+                    console.log('WordPress API error:', error);
+                }
+
+                // Third priority: Try to get display name from Luna License Manager session
+                if (licenseKey) {
+                    console.log('Trying Luna License Manager session...');
+                    const sessionData = await fetchUserDisplayName();
+                    console.log('Luna License Manager session data:', sessionData);
+                    if (sessionData && sessionData.user && sessionData.user.display_name) {
+                        // Extract first word from display_name
+                        const firstName = sessionData.user.display_name.split(' ')[0];
+                        console.log('Using first name from Luna License Manager:', firstName);
+                        clientNameEl.textContent = firstName;
+                        return;
+                    }
+                    
+                    // Try to get first name from WordPress user data as fallback
+                    console.log('Trying WordPress user data fallback...');
+                    const userData = await fetchUserData();
+                    console.log('WordPress user data fallback:', userData);
+                    if (userData && userData.first_name) {
+                        console.log('Using first name from WordPress user data:', userData.first_name);
+                        clientNameEl.textContent = userData.first_name;
+                        return;
+                    }
+                    
+                    // Final fallback to license key or constellation data
+                    console.log('Falling back to license key system...');
+                    const clientName = getClientNameFromLicense(licenseKey);
+                    console.log('Using license key fallback:', clientName);
+                    clientNameEl.textContent = clientName;
+                } else {
+                    // No license key, use default
+                    console.log('No license key, using default "Client"');
+                    clientNameEl.textContent = 'Client';
+                }
+            }
+        }
+
+        // Refresh client name when constellation data is updated
+        async function refreshClientName() {
+            await updateClientName();
+        }
+
+        // Fetch user data from WordPress API
+        async function fetchUserData() {
+            try {
+                const response = await fetch('https://visiblelight.ai/wp-json/wp/v2/users/me', {
+                    credentials: 'include'
+                });
+                if (response.ok) {
+                    const userData = await response.json();
+                    console.log('User data from WordPress:', userData);
+                    return userData;
+                }
+            } catch (error) {
+                console.log('Could not fetch user data:', error);
+            }
+            return null;
+        }
+
+        // Fetch user display name from Luna License Manager API
+        async function fetchUserDisplayName() {
+            try {
+                const response = await fetch('https://visiblelight.ai/wp-json/vl-hub/v1/session', {
+                    credentials: 'include'
+                });
+                if (response.ok) {
+                    const sessionData = await response.json();
+                    console.log('Session data from Luna License Manager:', sessionData);
+                    return sessionData;
+                }
+            } catch (error) {
+                console.log('Could not fetch session data:', error);
+            }
+            return null;
+        }
+
+        // Get client name from license key or VL Hub data
+        function getClientNameFromLicense(license) {
+            console.log('Getting client name, constellationData:', constellationData);
+            
+            // Try to get client name from constellation data first
+            if (constellationData && constellationData.clients && constellationData.clients.length > 0) {
+                const clientData = constellationData.clients[0];
+                console.log('Client data found:', clientData);
+                if (clientData.client && clientData.client !== 'Unassigned Client') {
+                    // Extract first name from client name
+                    const firstName = clientData.client.split(' ')[0];
+                    console.log('Using first name from VL Hub:', firstName);
+                    return firstName;
+                }
+            }
+            
+            // For "Unassigned Client", try to get first name from user data or site URL
+            if (constellationData && constellationData.clients && constellationData.clients.length > 0) {
+                const clientData = constellationData.clients[0];
+                
+                // Try to get first name from user data if available
+                if (clientData.user_data && clientData.user_data.first_name) {
+                    console.log('Using first name from user data:', clientData.user_data.first_name);
+                    return clientData.user_data.first_name;
+                }
+                
+                // Try to get first name from license key if it contains user info
+                if (license && license.includes('-')) {
+                    const parts = license.split('-');
+                    if (parts.length > 1) {
+                        // Look for a name pattern in the license key
+                        const possibleName = parts[1];
+                        if (possibleName && possibleName.length > 2 && /^[A-Za-z]+$/.test(possibleName)) {
+                            console.log('Using name from license key:', possibleName);
+                            return possibleName.charAt(0).toUpperCase() + possibleName.slice(1).toLowerCase();
+                        }
+                    }
+                }
+                
+                // Fallback to site URL extraction
+                if (clientData.site) {
+                    try {
+                        const url = new URL(clientData.site);
+                        const domain = url.hostname.replace('www.', '');
+                        const siteName = domain.split('.')[0];
+                        if (siteName && siteName.length > 2) {
+                            console.log('Using site name as fallback:', siteName);
+                            return siteName.charAt(0).toUpperCase() + siteName.slice(1);
+                        }
+                    } catch (e) {
+                        console.log('Could not parse site URL:', e);
+                    }
+                }
+            }
+            
+            // Fallback to license key parsing
+            if (license && license.startsWith('VL-')) {
+                console.log('Using license key fallback');
+                return license.substring(3, 8); // Show middle part of license
+            }
+            console.log('Using default client name');
+            return 'Client';
+        }
+
+        // Update license key display
+        function updateLicenseKeyDisplay() {
+            const licenseKeyEl = document.getElementById('licenseKeyDisplay');
+            if (licenseKeyEl) {
+                if (licenseKey) {
+                    licenseKeyEl.textContent = licenseKey;
+                } else {
+                    licenseKeyEl.textContent = 'No license key';
+                }
+            }
+        }
+
+        // Setup menu navigation
+        function setupMenuNavigation() {
+            const menuItems = document.querySelectorAll('.vl-main-menu a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const section = item.getAttribute('data-section');
+                    
+                    // Remove active class from all items
+                    menuItems.forEach(menuItem => {
+                        menuItem.parentElement.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked item
+                    item.parentElement.classList.add('active');
+                    
+                    // Handle section navigation
+                    handleSectionNavigation(section);
+                });
+            });
+        }
+
+        // Handle section navigation
+        function handleSectionNavigation(section) {
+            console.log('Navigating to section:', section);
+            
+            // Map menu sections to galaxy names
+            const sectionToGalaxyMap = {
+                'web-infra': 'Web Infrastructure & Performance',
+                'content': 'Content Universe',
+                'search-intel': 'Search Engine Intelligence',
+                'reporting': 'Analytics & Engagement',
+                'marketing-ads': 'Marketing & Campaign Data',
+                'ecommerce': 'E-Commerce & Conversion Data',
+                'security-compliance': 'Security & Compliance Data',
+                'cloudops': 'CloudOps & Infrastructure Metrics',
+                'user-identity': 'User & Identity Layer',
+                'competitive': 'Content / Competitive & Market Data'
+            };
+            
+            if (section === 'supercluster') {
+                // Revert to default - no highlighted galaxies
+                highlightGalaxy(null);
+            } else if (sectionToGalaxyMap[section]) {
+                // Highlight the corresponding galaxy
+                highlightGalaxy(sectionToGalaxyMap[section]);
+            }
+        }
+
+        // Highlight specific galaxy
+        function highlightGalaxy(galaxyName) {
+            // Remove existing highlights
+            if (window.galaxyObjects) {
+                window.galaxyObjects.forEach(galaxy => {
+                    if (galaxy.mesh) {
+                        galaxy.mesh.material.emissive.setHex(0x000000);
+                        galaxy.mesh.material.opacity = 0.8;
+                    }
+                });
+            }
+            
+            // Highlight the specified galaxy
+            if (galaxyName && window.galaxyObjects) {
+                const targetGalaxy = window.galaxyObjects.find(galaxy => 
+                    galaxy.name === galaxyName
+                );
+                
+                if (targetGalaxy && targetGalaxy.mesh) {
+                    targetGalaxy.mesh.material.emissive.setHex(0x2B6AFF);
+                    targetGalaxy.mesh.material.opacity = 1.0;
+                }
+            }
+        }
+
+
+        // Setup connection status
+        function setupConnectionStatus() {
+            const connectionIcon = document.getElementById('connectionIcon');
+            const connectionStatus = document.getElementById('connectionStatus');
+            
+            // Update connection status based on data fetch
+            function updateConnectionStatus(isConnected, error = null) {
+                if (isConnected) {
+                    connectionIcon.src = 'https://visiblelight.ai/wp-content/uploads/2025/10/checkmark.svg'; // Replace with your check image path
+                    connectionIcon.alt = 'Connected';
+                    connectionIcon.className = 'status-icon';
+                    connectionStatus.textContent = 'Active';
+                } else {
+                    connectionIcon.src = 'https://visiblelight.ai/wp-content/uploads/2025/10/x-close-icon.svg';
+                    connectionIcon.alt = 'Disconnected';
+                    connectionIcon.className = 'status-icon error';
+                    connectionStatus.textContent = error || 'Disconnected';
+                }
+            }
+
+            // Monitor connection status
+            setInterval(() => {
+                const isConnected = constellationData !== null && !dataFetchError;
+                updateConnectionStatus(isConnected, dataFetchError);
+            }, 1000);
+        }
+
+        // Setup client dropdown functionality
+        function setupClientDropdown() {
+            console.log('Setting up client dropdown...');
+            const dropdownArrow = document.getElementById('clientDropdownArrow');
+            const dropdownLightbox = document.getElementById('clientDropdownLightbox');
+            const accountSettings = document.getElementById('accountSettings');
+            const logoutOption = document.getElementById('logoutOption');
+            const logoutModal = document.getElementById('logoutModal');
+            const logoutCancel = document.getElementById('logoutCancel');
+            const logoutConfirm = document.getElementById('logoutConfirm');
+            
+            console.log('Dropdown elements found:', {
+                dropdownArrow: !!dropdownArrow,
+                dropdownLightbox: !!dropdownLightbox,
+                accountSettings: !!accountSettings,
+                logoutOption: !!logoutOption,
+                logoutModal: !!logoutModal,
+                logoutCancel: !!logoutCancel,
+                logoutConfirm: !!logoutConfirm
+            });
+
+            // Toggle dropdown on arrow click
+            if (dropdownArrow) {
+                console.log('Adding click listener to dropdown arrow');
+                dropdownArrow.addEventListener('click', (e) => {
+                    console.log('Dropdown arrow clicked!');
+                    e.stopPropagation();
+                    toggleDropdown();
+                });
+            } else {
+                console.error('Dropdown arrow element not found!');
+            }
+
+            // Account Settings click
+            if (accountSettings) {
+                accountSettings.addEventListener('click', () => {
+                    // Set # for now, will link later
+                    window.location.href = '#';
+                    closeDropdown();
+                });
+            }
+
+            // Logout option click
+            if (logoutOption) {
+                console.log('Adding logout option click listener');
+                logoutOption.addEventListener('click', (e) => {
+                    console.log('Logout option clicked!');
+                    e.preventDefault();
+                    e.stopPropagation();
+                    showLogoutModal();
+                    closeDropdown();
+                });
+            } else {
+                console.error('Logout option element not found!');
+            }
+
+            // Logout modal buttons
+            if (logoutCancel) {
+                logoutCancel.addEventListener('click', () => {
+                    hideLogoutModal();
+                });
+            }
+
+            if (logoutConfirm) {
+                logoutConfirm.addEventListener('click', () => {
+                    performLogout();
+                });
+            }
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!dropdownLightbox.contains(e.target) && !dropdownArrow.contains(e.target)) {
+                    closeDropdown();
+                }
+            });
+
+            function toggleDropdown() {
+                console.log('Toggle dropdown called');
+                if (dropdownLightbox) {
+                    const isVisible = dropdownLightbox.style.display !== 'none';
+                    console.log('Current visibility:', isVisible);
+                    dropdownLightbox.style.display = isVisible ? 'none' : 'block';
+                    console.log('New display style:', dropdownLightbox.style.display);
+                } else {
+                    console.error('Dropdown lightbox element not found!');
+                }
+            }
+
+            function closeDropdown() {
+                if (dropdownLightbox) {
+                    dropdownLightbox.style.display = 'none';
+                }
+            }
+
+            function showLogoutModal() {
+                console.log('showLogoutModal called');
+                if (logoutModal) {
+                    console.log('Showing logout modal');
+                    logoutModal.style.display = 'block';
+                } else {
+                    console.error('Logout modal element not found!');
+                }
+            }
+
+            function hideLogoutModal() {
+                if (logoutModal) {
+                    logoutModal.style.display = 'none';
+                }
+            }
+
+            function performLogout() {
+                // Clear any stored data
+                localStorage.removeItem('vl-cms-data');
+                sessionStorage.clear();
+                
+                // Redirect to main domain
+                window.location.href = 'https://visiblelight.ai/';
+            }
+        }
+
+        // Setup control buttons
+        function setupControlButtons() {
+            // Left/Right controls
+            const controlLeft = document.getElementById('controlLeft');
+            const controlRight = document.getElementById('controlRight');
+            
+            if (controlLeft) {
+                controlLeft.addEventListener('click', () => {
+                    // Move supercluster left
+                    if (camera) {
+                        camera.position.x -= 2;
+                        camera.lookAt(0, 0, 0);
+                    }
+                });
+            }
+            
+            if (controlRight) {
+                controlRight.addEventListener('click', () => {
+                    // Move supercluster right
+                    if (camera) {
+                        camera.position.x += 2;
+                        camera.lookAt(0, 0, 0);
+                    }
+                });
+            }
+
+            // Zoom controls
+            const controlZoomIn = document.getElementById('controlZoomIn');
+            const controlZoomOut = document.getElementById('controlZoomOut');
+            
+            if (controlZoomIn) {
+                controlZoomIn.addEventListener('click', () => {
+                    // Zoom in
+                    if (camera) {
+                        camera.position.multiplyScalar(0.9);
+                    }
+                });
+            }
+            
+            if (controlZoomOut) {
+                controlZoomOut.addEventListener('click', () => {
+                    // Zoom out
+                    if (camera) {
+                        camera.position.multiplyScalar(1.1);
+                    }
+                });
+            }
+
+            // Toggle connections
+            const controlToggleConnections = document.getElementById('controlToggleConnections');
+            const connectionsIcon = document.getElementById('connectionsIcon');
+            
+            if (controlToggleConnections && connectionsIcon) {
+                controlToggleConnections.addEventListener('click', () => {
+                    // Toggle connections visibility
+                    connectionsVisible = !connectionsVisible;
+                    
+                    if (connectionsIcon) {
+                        if (connectionsVisible) {
+                            connectionsIcon.textContent = '👁';
+                            connectionsIcon.classList.remove('hidden');
+                        } else {
+                            connectionsIcon.textContent = '🚫';
+                            connectionsIcon.classList.add('hidden');
+                        }
+                    }
+                    
+                    // Update connections visibility in the scene
+                    updateConnectionsVisibility();
+                });
+            }
+
+            // Special effect button
+            const controlSpecial = document.getElementById('controlSpecial');
+            if (controlSpecial) {
+                controlSpecial.addEventListener('click', () => {
+                    // Trigger special effect
+                    triggerSpecialEffect();
+                });
+            }
+        }
+
+        // Update connections visibility
+        function updateConnectionsVisibility() {
+            console.log('Connections visible:', connectionsVisible);
+            
+            // Update the connectionLines group visibility in the Three.js scene
+            if (window.connectionLines) {
+                window.connectionLines.visible = connectionsVisible;
+                console.log('Updated connectionLines.visible to:', connectionsVisible);
+            } else {
+                console.log('connectionLines not found, trying to find it...');
+                // Try to find connectionLines in the scene
+                const superclusterGroup = scene.getObjectByName('superclusterGroup');
+                if (superclusterGroup) {
+                    const foundConnectionLines = superclusterGroup.children.find(child => child.type === 'Group' && child.children.length > 0 && child.children[0].material && child.children[0].material.uniforms);
+                    if (foundConnectionLines) {
+                        foundConnectionLines.visible = connectionsVisible;
+                        console.log('Found and updated connectionLines.visible to:', connectionsVisible);
+                    }
+                }
+            }
+        }
+
+        // Trigger special effect
+        function triggerSpecialEffect() {
+            // This would trigger a special visual effect in the Supercluster
+            console.log('Special effect triggered');
+        }
+
+        // Fetch data on load
+        fetchConstellationData().then(async data => {
+            console.log('Constellation data loaded:', data);
+            constellationData = data;
+            updateVerificationPanel(data, dataFetchError);
+            if (data && data.clients && data.clients.length > 0) {
+                updateGalaxyDataWithRealData(data.clients[0]); // Use first client's data
+            }
+            // Refresh client name with new data
+            await refreshClientName();
+        }).catch(async error => {
+            console.error('Failed to fetch constellation data:', error);
+            // Still try to refresh client name in case we have cached data
+            await refreshClientName();
+        });
+
+        // Set up periodic data refresh (every 5 minutes)
+        setInterval(async () => {
+            console.log('Refreshing constellation data...');
+            const data = await fetchConstellationData();
+            constellationData = data;
+            updateVerificationPanel(data, dataFetchError);
+            if (data && data.clients && data.clients.length > 0) {
+                updateGalaxyDataWithRealData(data.clients[0]);
+            }
+            // Refresh client name with new data
+            await refreshClientName();
+        }, 5 * 60 * 1000); // 5 minutes
+
+        const rootContainer = document.getElementById("vlSuperclusterRoot") || document.body;
+        const htmlElement = document.documentElement;
+        const bodyElement = document.body;
+        const scrollLockClass = "vl-supercluster-scroll-lock";
+
+
+
+        function createSoftParticleTexture(size = 256) {
+            const canvas = document.createElement("canvas");
+            canvas.width = size;
+            canvas.height = size;
+            const context = canvas.getContext("2d");
+            const half = size / 2;
+            const gradient = context.createRadialGradient(half, half, 0, half, half, half);
+            gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
+            gradient.addColorStop(0.35, "rgba(255, 255, 255, 0.75)");
+            gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+            context.fillStyle = gradient;
+            context.fillRect(0, 0, size, size);
+            const texture = new THREE.Texture(canvas);
+            texture.needsUpdate = true;
+            texture.colorSpace = THREE.SRGBColorSpace;
+            return texture;
+        }
+
+        function createNebulaTexture(size = 512) {
+            const canvas = document.createElement("canvas");
+            canvas.width = size;
+            canvas.height = size;
+            const context = canvas.getContext("2d");
+            context.clearRect(0, 0, size, size);
+            const center = size / 2;
+            
+            // Your brand colors
+            const brandColors = ['#920101', '#8D8C00', '#974C00'];
+            const selectedColor = brandColors[Math.floor(Math.random() * brandColors.length)];
+            
+            // Convert hex to RGB for opacity variations
+            const hex = selectedColor.replace('#', '');
+            const r = parseInt(hex.substr(0, 2), 16);
+            const g = parseInt(hex.substr(2, 2), 16);
+            const b = parseInt(hex.substr(4, 2), 16);
+
+            const baseGradient = context.createRadialGradient(center, center, size * 0.1, center, center, center);
+            baseGradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.75)`);
+            baseGradient.addColorStop(0.35, `rgba(${r}, ${g}, ${b}, 0.55)`);
+            baseGradient.addColorStop(0.6, `rgba(${r}, ${g}, ${b}, 0.32)`);
+            baseGradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+            context.fillStyle = baseGradient;
+            context.fillRect(0, 0, size, size);
+
+            const shardCount = 8 + Math.floor(Math.random() * 6);
+            for (let i = 0; i < shardCount; i++) {
+                const shardX = center + (Math.random() - 0.5) * size * 0.55;
+                const shardY = center + (Math.random() - 0.5) * size * 0.35;
+                const shardRadius = size * (0.08 + Math.random() * 0.14);
+                const shardGradient = context.createRadialGradient(
+                    shardX,
+                    shardY,
+                    shardRadius * 0.2,
+                    shardX,
+                    shardY,
+                    shardRadius
+                );
+                shardGradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.65)`);
+                shardGradient.addColorStop(0.55, `rgba(${r}, ${g}, ${b}, 0.35)`);
+                shardGradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+                context.fillStyle = shardGradient;
+                context.beginPath();
+                context.arc(shardX, shardY, shardRadius, 0, Math.PI * 2);
+                context.fill();
+            }
+
+            const texture = new THREE.Texture(canvas);
+            texture.needsUpdate = true;
+            texture.colorSpace = THREE.SRGBColorSpace;
+            return texture;
+        }
+
+        const baseParticleTexture = createSoftParticleTexture();
+
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x02040a);
+        scene.fog = new THREE.FogExp2(0x040714, 0.00035);
+
+        // --- Perseus–Pisces style starfield / backplate (optional) ---
+        {
+          const PP_URL = ""; // e.g. "https://yourcdn/perseus-pisces-8k.jpg"
+          if (PP_URL) {
+            new THREE.TextureLoader().load(PP_URL, (tx) => {
+              tx.colorSpace = THREE.SRGBColorSpace;
+              const geo = new THREE.SphereGeometry(3000, 64, 64);
+              const mat = new THREE.MeshBasicMaterial({
+                map: tx, side: THREE.BackSide, transparent: true, opacity: 0.55
+              });
+              const dome = new THREE.Mesh(geo, mat);
+              dome.rotation.y = Math.PI * 0.33;
+              scene.add(dome);
+            });
+          }
+        }
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.outputColorSpace = THREE.SRGBColorSpace;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.12;
+            rootContainer.insertBefore(renderer.domElement, rootContainer.firstChild || null);
+
+        const camera = new THREE.PerspectiveCamera(52, window.innerWidth / window.innerHeight, 0.1, 1500);
+        camera.position.set(0, 120, 800); // Start at maximum zoom-out distance
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.minDistance = 120;
+        controls.maxDistance = 800;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.18;
+        controls.enablePan = false;
+        
+        // Set the target to center on the supercluster (0, 0, 0)
+        controls.target.set(0, 0, 0);
+        controls.update();
+        
+        // Debug: Log camera position
+        console.log('Camera position:', camera.position);
+        console.log('Camera target:', controls.target);
+
+        const superclusterGroup = new THREE.Group();
+        superclusterGroup.name = 'superclusterGroup';
+        scene.add(superclusterGroup);
+
+        const atmosphereShell = new THREE.Mesh(
+            new THREE.SphereGeometry(1400, 64, 64),
+            new THREE.MeshBasicMaterial({
+                color: 0x060b18,
+                transparent: true,
+                opacity: 0.42,
+                side: THREE.BackSide,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending,
+            })
+        );
+        scene.add(atmosphereShell);
+
+        const nebulaGroup = new THREE.Group();
+        superclusterGroup.add(nebulaGroup);
+        const nebulaClouds = [];
+
+        function seedNebulaClouds() {
+            nebulaGroup.clear();
+            nebulaClouds.length = 0;
+            const cloudCount = 7 + Math.floor(Math.random() * 3);
+            for (let i = 0; i < cloudCount; i++) {
+                const nebulaTexture = createNebulaTexture();
+                const geometry = new THREE.PlaneGeometry(420 + Math.random() * 260, 280 + Math.random() * 180, 1, 1);
+                const material = new THREE.MeshBasicMaterial({
+                    map: nebulaTexture,
+                    transparent: true,
+                    opacity: 0.24 + Math.random() * 0.18,
+                    blending: THREE.AdditiveBlending,
+                    depthWrite: false,
+                    depthTest: false,
+                    side: THREE.DoubleSide,
+                });
+                const mesh = new THREE.Mesh(geometry, material);
+                mesh.position.set((Math.random() - 0.5) * 420, (Math.random() - 0.5) * 260, (Math.random() - 0.5) * 420);
+                mesh.rotation.set(
+                    Math.PI / 2 + (Math.random() - 0.5) * 0.6,
+                    (Math.random() - 0.5) * 0.9,
+                    (Math.random() - 0.5) * 0.6
+                );
+                mesh.userData = {
+                    baseOpacity: material.opacity,
+                    basePosition: mesh.position.clone(),
+                    drift: new THREE.Vector3((Math.random() - 0.5) * 26, (Math.random() - 0.5) * 18, (Math.random() - 0.5) * 26),
+                    rotationSpeed: 0.00008 + Math.random() * 0.00018,
+                    phaseOffset: Math.random() * Math.PI * 2,
+                };
+                nebulaGroup.add(mesh);
+                nebulaClouds.push(mesh);
+            }
+        }
+
+        seedNebulaClouds();
+
+        const galaxyData = [
+            {
+                name: "Website Infrastructure & Performance",
+                datasetSlugs: ["infrastructure", "themes", "operations"],
+                fallbackDescription:
+                    "Optimize delivery, resiliency, and user experience with infrastructure telemetry spanning uptime, performance, and observability signals.",
+                description: "",
+                position: new THREE.Vector3(-220, 60, -140),
+                color: "#6fb1ff",
+                connections: ["Content Management & Structure", "Analytics & Engagement"],
+            },
+            {
+                name: "Content Management & Structure",
+                datasetSlugs: ["content", "structure"],
+                fallbackDescription:
+                    "Govern editorial pipelines, asset taxonomies, and omnichannel orchestration to keep experiences coherent across platforms.",
+                description: "",
+                position: new THREE.Vector3(-80, 20, 60),
+                color: "#ff9cf0",
+                connections: ["Website Infrastructure & Performance", "Search Engine Intelligence", "Marketing & Campaign Data"],
+            },
+            {
+                name: "Search Engine Intelligence",
+                datasetSlugs: ["ai", "search", "integrations"],
+                fallbackDescription:
+                    "Harvest crawl signals, SERP movement, and algorithmic shifts to ensure content is discoverable and performant.",
+                description: "",
+                position: new THREE.Vector3(40, 140, -60),
+                color: "#83f3ff",
+                connections: ["Content Management & Structure", "Analytics & Engagement", "Competitive & Market Data"],
+            },
+            {
+                name: "Analytics & Engagement",
+                datasetSlugs: ["sessions", "analytics", "engagement"],
+                fallbackDescription:
+                    "Synthesize behavioral analytics, funnel friction, and feedback loops to illuminate experience optimization opportunities.",
+                description: "",
+                position: new THREE.Vector3(160, 40, 120),
+                color: "#ffe699",
+                connections: ["Website Infrastructure & Performance", "Search Engine Intelligence", "Marketing & Campaign Data", "User & Identity Layer"],
+            },
+            {
+                name: "Marketing & Campaign Data",
+                datasetSlugs: ["integrations", "marketing", "campaigns"],
+                fallbackDescription:
+                    "Unify campaign performance, attribution modeling, and creative intelligence to amplify revenue-driving initiatives.",
+                description: "",
+                position: new THREE.Vector3(260, -20, -80),
+                color: "#d9a6ff",
+                connections: ["Content Management & Structure", "Analytics & Engagement", "E-Commerce & Conversion Data"],
+            },
+            {
+                name: "E-Commerce & Conversion Data",
+                datasetSlugs: ["plugins", "commerce", "ecommerce"],
+                fallbackDescription:
+                    "Map product analytics, merchandising flows, and conversion health to reveal revenue acceleration pathways.",
+                description: "",
+                position: new THREE.Vector3(-40, -120, -40),
+                color: "#ff6b6b",
+                connections: ["Marketing & Campaign Data", "User & Identity Layer", "Security & Compliance Data"],
+            },
+            {
+                name: "Security & Compliance Data",
+                datasetSlugs: ["security", "compliance"],
+                fallbackDescription:
+                    "Monitor threat detection, governance policies, and regulatory controls to keep the data supply chain secure.",
+                description: "",
+                position: new THREE.Vector3(-200, -40, 150),
+                color: "#9dffb0",
+                connections: ["CloudOps & Infrastructure Metrics", "E-Commerce & Conversion Data"],
+            },
+            {
+                name: "CloudOps & Infrastructure Metrics",
+                datasetSlugs: ["themes", "infrastructure", "cloudops"],
+                fallbackDescription:
+                    "Observe deployment velocity, cost efficiency, and platform reliability to ensure modern operations excellence.",
+                description: "",
+                position: new THREE.Vector3(100, -180, 60),
+                color: "#ffc7a5",
+                connections: ["Security & Compliance Data", "Website Infrastructure & Performance"],
+            },
+            {
+                name: "User & Identity Layer",
+                datasetSlugs: ["identity", "users"],
+                fallbackDescription:
+                    "Understand identity graphs, access journeys, and consent preferences to personalize experiences responsibly.",
+                description: "",
+                position: new THREE.Vector3(-280, 160, 60),
+                color: "#7f9bff",
+                connections: ["Analytics & Engagement", "E-Commerce & Conversion Data", "Competitive & Market Data"],
+            },
+            {
+                name: "Competitive & Market Data",
+                datasetSlugs: ["users", "market", "competitive"],
+                fallbackDescription:
+                    "Track competitive shifts, market momentum, and whitespace detection to guide strategic positioning.",
+                description: "",
+                position: new THREE.Vector3(60, -40, 220),
+                color: "#9bffe7",
+                connections: ["Search Engine Intelligence", "User & Identity Layer"],
+            },
+        ];
+
+        // --- Category palettes (hand-picked to be distinct, spacey, and harmonious) ---
+        const CATEGORY_PALETTES = {
+          "Website Infrastructure & Performance": ["#73c5ff", "#3aa3ff", "#c2e7ff"],
+          "Content Management & Structure": ["#ff8ad6", "#ff69b4", "#ffc3e8"],
+          "Search Engine Intelligence": ["#7af7ff", "#35e3ff", "#c9fbff"],
+          "Analytics & Engagement": ["#ffe08a", "#ffd24a", "#fff2c6"],
+          "Marketing & Campaign Data": ["#d7a4ff", "#bb7bff", "#edd8ff"],
+          "E-Commerce & Conversion Data": ["#ff7b7b", "#ff4d4d", "#ffd0d0"],
+          "Security & Compliance Data": ["#9af9b0", "#69f58f", "#d6ffde"],
+          "CloudOps & Infrastructure Metrics": ["#ffc9a7", "#ffad7a", "#ffe2d3"],
+          "User & Identity Layer": ["#8aa0ff", "#6382ff", "#d3dbff"],
+          "Competitive & Market Data": ["#9dffef", "#65ffe6", "#ddfffb"]
+        };
+
+        // Keep fallbacks/metrics setup
+        galaxyData.forEach((entry) => {
+            entry.slug = entry.datasetSlugs[0];
+            entry.description = entry.fallbackDescription;
+            entry.metrics = null;
+        });
+
+        // --- Compute degrees (out + in) for intensity mapping ---
+        const outDegree = Object.fromEntries(galaxyData.map(g => [g.name, g.connections.length]));
+        const inDegree = {};
+        galaxyData.forEach(g => inDegree[g.name] = 0);
+        galaxyData.forEach(g => g.connections.forEach(t => { inDegree[t] = (inDegree[t]||0) + 1; }));
+
+        const degree = {};
+        let maxDegree = 1;
+        galaxyData.forEach(g => {
+          degree[g.name] = (outDegree[g.name] || 0) + (inDegree[g.name] || 0);
+          maxDegree = Math.max(maxDegree, degree[g.name]);
+        });
+
+        // Small helper: get palette & intensity (0..1) for a category
+        function getCategoryStyle(name) {
+          const pal = CATEGORY_PALETTES[name] || ["#9fd6ff", "#ffffff"];
+          const d = degree[name] || 0;
+          const intensity = maxDegree ? (d / maxDegree) : 0.5; // brighter for more connected
+          return { palette: pal, intensity };
+        }
+
+        const galaxyGroups = new Map();
+
+        const raycaster = new THREE.Raycaster();
+        const pointer = new THREE.Vector2();
+        const tempWorldPosition = new THREE.Vector3();
+        const projectedPosition = new THREE.Vector3();
+        const cameraDirection = new THREE.Vector3();
+        const panRight = new THREE.Vector3();
+        const zoomOffset = new THREE.Vector3();
+
+        const labelsContainer = document.createElement("div");
+        labelsContainer.className = "vl-supercluster-labels";
+            rootContainer.appendChild(labelsContainer);
+
+        function createLabel(name) {
+            const el = document.createElement("div");
+            el.className = "floating-label";
+            el.textContent = name;
+            
+            // Custom styling for galaxy labels
+            el.style.position = "absolute"; // Required for backdropFilter
+            el.style.color = "#fff4e7"; // White text
+            el.style.fontSize = "14px";
+            el.style.fontWeight = "600";
+            el.style.letterSpacing = "0";
+            el.style.textTransform = "capitalize";
+            el.style.textShadow = "0 0 10px rgba(0,0,0, 0.8)"; // Blue glow
+            el.style.background = "rgba(0,0,0, 0.8)"; // Dark background
+            el.style.padding = "8px 12px";
+            el.style.borderRadius = "50px";
+            el.style.backdropFilter = "blur(8px)"; // Standard
+            el.style.webkitBackdropFilter = "blur(8px)"; // Safari support
+            el.style.isolation = "isolate"; // Create stacking context
+            el.style.willChange = "transform"; // Optimize rendering
+            
+            labelsContainer.appendChild(el);
+            return el;
+        }
+
+        function createGalaxyGroup({ name, position }) {
+          const { palette, intensity } = getCategoryStyle(name);
+          const group = new THREE.Group();
+          group.position.copy(position);
+
+          // Mother core color (base of group)
+          const base = new THREE.Color(palette[0]);
+          const coreColor = base.clone().lerp(new THREE.Color("#ffffff"), 0.25 * intensity);
+
+          // Mother core (category nucleus)
+          const coreGeom = new THREE.SphereGeometry(10.8, 64, 64);
+          const coreMat  = new THREE.MeshPhongMaterial({
+            color: coreColor,
+            emissive: coreColor.clone().multiplyScalar(0.7 + 0.6 * intensity),
+            shininess: 200, specular: 0xffffff
+          });
+          const core = new THREE.Mesh(coreGeom, coreMat);
+          coreMat.emissiveIntensity = 1.2 + 1.4 * intensity;
+          group.add(core);
+
+          // Halo (flares with intensity)
+          const halo = new THREE.Mesh(
+            new THREE.SphereGeometry(26 + 6 * intensity, 48, 48),
+            new THREE.MeshBasicMaterial({
+              color: coreColor, transparent: true,
+              opacity: 0.2 + 0.35 * intensity,
+              side: THREE.BackSide, depthWrite: false, blending: THREE.AdditiveBlending
+            })
+          );
+          group.add(halo);
+
+          // Disc/Orbit accents (scale with intensity)
+          const disc = new THREE.Mesh(
+            new THREE.RingGeometry(18, 44, 96),
+            new THREE.MeshBasicMaterial({
+              color: coreColor.clone().lerp(new THREE.Color("#ffffff"), 0.15 + 0.25 * intensity),
+              transparent: true, opacity: 0.24 + 0.3 * intensity,
+              side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false
+            })
+          );
+          disc.rotation.x = Math.PI / 2;
+          group.add(disc);
+
+          const orbit = new THREE.Mesh(
+            new THREE.RingGeometry(48, 62, 96),
+            new THREE.MeshBasicMaterial({
+              color: base.clone().lerp(new THREE.Color("#a9f0ff"), 0.2 + 0.25 * intensity),
+              transparent: true, opacity: 0.18 + 0.2 * intensity,
+              side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false
+            })
+          );
+          orbit.rotation.x = Math.PI / 2.2;
+          group.add(orbit);
+
+          // Child nodes (mini-galaxies) – count scales with degree (2..6)
+          const childCount = Math.max(2, Math.min(6, Math.round(2 + intensity * 6)));
+          const children = [];
+          const childGeo = new THREE.SphereGeometry(5.2, 48, 48);
+
+          for (let i = 0; i < childCount; i++) {
+            const huePick = palette[(i + 1) % palette.length];
+            const childBase = new THREE.Color(huePick);
+            const childCol  = childBase.clone().lerp(new THREE.Color("#ffffff"), 0.2 + 0.5 * Math.random() * intensity);
+
+            const m = new THREE.MeshPhongMaterial({
+              color: childCol,
+              emissive: childCol.clone().multiplyScalar(0.45 + 0.9 * intensity),
+              shininess: 140, specular: 0xffffff
+            });
+            m.emissiveIntensity = 0.8 + 1.2 * intensity;
+
+            const mini = new THREE.Mesh(childGeo, m);
+
+            // Place children on a loose ring; jitter positions for natural grouping
+            const r = 42 + 22 * Math.random() + 30 * intensity;
+            const a = (i / childCount) * Math.PI * 2 + Math.random() * 0.5;
+            mini.position.set(Math.cos(a) * r, (Math.random() - 0.5) * (12 + 20 * intensity), Math.sin(a) * r);
+
+            // Small halo for each child
+            const chHalo = new THREE.Mesh(
+              new THREE.SphereGeometry(12, 32, 32),
+              new THREE.MeshBasicMaterial({
+                color: childCol, transparent: true,
+                opacity: 0.16 + 0.25 * intensity,
+                side: THREE.BackSide, blending: THREE.AdditiveBlending, depthWrite: false
+              })
+            );
+            mini.add(chHalo);
+
+            // Sparkle layer on children
+            const sparkle = new THREE.Points(
+              (() => {
+                const sg = new THREE.BufferGeometry();
+                const n = 80;
+                const pos = new Float32Array(n * 3);
+                for (let j = 0; j < n; j++) {
+                  const rr = 8 + 10 * Math.random();
+                  const ang = Math.random() * Math.PI * 2;
+                  const h = (Math.random() - 0.5) * 10;
+                  pos[j * 3] = Math.cos(ang) * rr;
+                  pos[j * 3 + 1] = h;
+                  pos[j * 3 + 2] = Math.sin(ang) * rr;
+                }
+                sg.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+                return sg;
+              })(),
+              new THREE.PointsMaterial({
+                map: baseParticleTexture,
+                color: childCol.clone().lerp(new THREE.Color("#ffffff"), 0.4),
+                size: 6, sizeAttenuation: true, transparent: true,
+                opacity: 0.4 + 0.3 * intensity, blending: THREE.AdditiveBlending,
+                depthWrite: false, depthTest: false
+              })
+            );
+            sparkle.rotation.x = Math.PI / 2;
+            mini.add(sparkle);
+
+            group.add(mini);
+            children.push(mini);
+          }
+
+          // Label
+          const label = createLabel(name);
+          label.dataset.target = name;
+
+          // Lighting tuned to intensity
+          const pointLight = new THREE.PointLight(coreColor, 2.6 + 2.4 * intensity, 600 + 200 * intensity, 2.4);
+          pointLight.position.set(0, 0, 0);
+          group.add(pointLight);
+
+          // Store in our registry (preserve interface for rest of code)
+          galaxyGroups.set(name, {
+            name, group, core, halo, disc, orbit, label, pointLight,
+            children,
+            baseColor: base.clone(),
+            color: coreColor.clone(),
+            dataset: null,
+            // Add missing properties for compatibility
+            stars: null, // Not used in new structure
+            swirl: null, // Not used in new structure
+            sparkLayer: null // Not used in new structure
+          });
+
+          superclusterGroup.add(group);
+        }
+
+        galaxyData.forEach(d => createGalaxyGroup(d));
+        
+        // Debug: Check if galaxies were created
+        console.log('Galaxy groups created:', galaxyGroups.size);
+        console.log('Galaxy groups:', Array.from(galaxyGroups.keys()));
+        
+        // Debug: Check galaxy positions
+        galaxyGroups.forEach((entry, name) => {
+            console.log(`Galaxy ${name} position:`, entry.group.position);
+        });
+
+        const ambientLight = new THREE.AmbientLight(0x5f6f9f, 0.48);
+        scene.add(ambientLight);
+
+        const rimLight = new THREE.DirectionalLight(0x9fd6ff, 0.75);
+        rimLight.position.set(120, 260, 180);
+        scene.add(rimLight);
+
+        const warmLight = new THREE.DirectionalLight(0xffbf80, 0.58);
+        warmLight.position.set(-220, -160, -180);
+        scene.add(warmLight);
+
+        const coolFillLight = new THREE.DirectionalLight(0x3b58ff, 0.32);
+        coolFillLight.position.set(-140, 120, 260);
+        scene.add(coolFillLight);
+
+        const starFieldGeometry = new THREE.BufferGeometry();
+        const starFieldCount = 4200;
+        const starFieldPositions = new Float32Array(starFieldCount * 3);
+        const starFieldColors = new Float32Array(starFieldCount * 3);
+
+        const color = new THREE.Color();
+        for (let i = 0; i < starFieldCount; i++) {
+            const radius = 920 * Math.cbrt(Math.random());
+            const theta = Math.random() * 2 * Math.PI;
+            const phi = Math.acos(2 * Math.random() - 1);
+            starFieldPositions[i * 3] = Math.sin(phi) * Math.cos(theta) * radius;
+            starFieldPositions[i * 3 + 1] = Math.sin(phi) * Math.sin(theta) * radius;
+            starFieldPositions[i * 3 + 2] = Math.cos(phi) * radius;
+
+            const hue = 0.55 + Math.random() * 0.12;
+            color.setHSL(hue, 0.6, 0.65 + Math.random() * 0.2);
+            starFieldColors[i * 3] = color.r;
+            starFieldColors[i * 3 + 1] = color.g;
+            starFieldColors[i * 3 + 2] = color.b;
+        }
+
+        starFieldGeometry.setAttribute("position", new THREE.BufferAttribute(starFieldPositions, 3));
+        starFieldGeometry.setAttribute("color", new THREE.BufferAttribute(starFieldColors, 3));
+
+        const starFieldMaterial = new THREE.PointsMaterial({
+            map: baseParticleTexture,
+            size: 3.2,
+            vertexColors: true,
+            sizeAttenuation: true,
+            transparent: true,
+            opacity: 0.62,
+            depthWrite: false,
+            depthTest: false,
+            blending: THREE.AdditiveBlending,
+        });
+
+        const starField = new THREE.Points(starFieldGeometry, starFieldMaterial);
+        scene.add(starField);
+
+        const farStarFieldGeometry = new THREE.BufferGeometry();
+        const farStarFieldCount = 5200;
+        const farStarFieldPositions = new Float32Array(farStarFieldCount * 3);
+        const farStarFieldColors = new Float32Array(farStarFieldCount * 3);
+        for (let i = 0; i < farStarFieldCount; i++) {
+            const radius = 1500 * Math.cbrt(Math.random());
+            const theta = Math.random() * Math.PI * 2;
+            const phi = Math.acos(2 * Math.random() - 1);
+            farStarFieldPositions[i * 3] = Math.sin(phi) * Math.cos(theta) * radius;
+            farStarFieldPositions[i * 3 + 1] = Math.sin(phi) * Math.sin(theta) * radius;
+            farStarFieldPositions[i * 3 + 2] = Math.cos(phi) * radius;
+
+            const hue = 0.54 + Math.random() * 0.1;
+            color.setHSL(hue, 0.5, 0.45 + Math.random() * 0.25);
+            farStarFieldColors[i * 3] = color.r;
+            farStarFieldColors[i * 3 + 1] = color.g;
+            farStarFieldColors[i * 3 + 2] = color.b;
+        }
+        farStarFieldGeometry.setAttribute("position", new THREE.BufferAttribute(farStarFieldPositions, 3));
+        farStarFieldGeometry.setAttribute("color", new THREE.BufferAttribute(farStarFieldColors, 3));
+
+        const farStarFieldMaterial = new THREE.PointsMaterial({
+            map: baseParticleTexture,
+            size: 5.2,
+            vertexColors: true,
+            sizeAttenuation: true,
+            transparent: true,
+            opacity: 0.38,
+            depthWrite: false,
+            depthTest: false,
+            blending: THREE.AdditiveBlending,
+        });
+
+        const farStarField = new THREE.Points(farStarFieldGeometry, farStarFieldMaterial);
+        scene.add(farStarField);
+
+        const connectionBaseColor = new THREE.Color(0x6bc8ff);
+        const connectionLines = new THREE.Group();
+        superclusterGroup.add(connectionLines);
+        
+        // Make connectionLines globally accessible
+        window.connectionLines = connectionLines;
+        const connectionFlowEntries = [];
+
+        const connectionKey = (a, b) => [a, b].sort().join("::");
+        const createdConnections = new Set();
+
+        function drawConnections() {
+          // Cleanup
+          connectionLines.children.slice().forEach((child) => {
+            child.geometry && child.geometry.dispose();
+            child.material && child.material.dispose();
+          });
+          connectionLines.clear();
+          connectionFlowEntries.length = 0;
+          createdConnections.clear();
+
+          const pearlsGroup = new THREE.Group();
+          pearlsGroup.name = "axonPearls";
+          connectionLines.add(pearlsGroup);
+
+          for (const data of galaxyData) {
+            const source = galaxyGroups.get(data.name);
+            data.connections.forEach((targetName) => {
+              const key = connectionKey(data.name, targetName);
+              if (createdConnections.has(key)) return;
+              const target = galaxyGroups.get(targetName);
+              if (!target) return;
+
+              // Curved path midpoint with mild jitter (for organic variance)
+              const p0 = source.group.position.clone();
+              const p2 = target.group.position.clone();
+              const mid = p0.clone().add(p2).multiplyScalar(0.5);
+              mid.add(new THREE.Vector3(
+                (Math.random() - 0.5) * 140,
+                (Math.random() - 0.5) * 140,
+                (Math.random() - 0.5) * 140
+              ));
+
+              const curve = new THREE.CatmullRomCurve3([p0, mid, p2]);
+
+              // Slimmer tube for ethereal axon look
+              const geometry = new THREE.TubeGeometry(curve, 128, 0.9, 24, false);
+
+              // Blend source/target colors
+              const sourceColor = source.core.material.color.clone();
+              const targetColor = target.core.material.color.clone();
+              const blended = sourceColor.lerp(targetColor, 0.5);
+
+              // Neuronal glow shader: fresnel-ish rim + flowing head, soft aura
+              const flowMaterial = new THREE.ShaderMaterial({
+                uniforms: {
+                  uColor: { value: blended },
+                  uOpacity: { value: 0.36 },
+                  uTime: { value: Math.random() },
+                  uAura: { value: 0.35 },
+                  uPulse: { value: 0.0 }
+                },
+                vertexShader: `
+                  varying vec3 vNormal;
+                  varying vec2 vUv;
+                  void main(){
+                    vUv = uv;
+                    vNormal = normalize(normalMatrix * normal);
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                  }
+                `,
+                fragmentShader: `
+                  uniform vec3 uColor;
+                  uniform float uOpacity;
+                  uniform float uTime;
+                  uniform float uAura;
+                  uniform float uPulse;
+                  varying vec3 vNormal;
+                  varying vec2 vUv;
+
+                  void main(){
+                    // Fresnel-ish edge for ethereal rim
+                    float fres = pow(1.0 - abs(vNormal.z), 1.8);
+                    // Flow head (axon propagation)
+                    float t = fract(vUv.x - uTime);
+                    float head = smoothstep(0.0, 0.2, t) * smoothstep(1.0, 0.8, t);
+                    // Aura: soft body brightness breathing
+                    float aura = uAura * (0.55 + 0.45 * sin(6.2831 * (uTime*0.4 + vUv.x)));
+                    // Combine
+                    vec3 base = uColor * (0.35 + 0.35 * fres + aura);
+                    vec3 highlight = mix(base, vec3(1.0), 0.35 * head + 0.25 * uPulse);
+                    float alpha = uOpacity * (0.45 + 0.4 * fres + 0.35 * head + 0.35 * uPulse);
+                    gl_FragColor = vec4(highlight, alpha);
+                  }
+                `,
+                transparent: true,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+              });
+
+              const mesh = new THREE.Mesh(geometry, flowMaterial);
+              mesh.userData = {
+                start: data.name,
+                end: targetName,
+                baseColor: blended.clone(),
+                baseOpacity: 0.36,
+                targetOpacity: 0.36,
+                flowSpeed: 0.14 + Math.random() * 0.16,
+              };
+              connectionLines.add(mesh);
+              connectionFlowEntries.push(mesh);
+
+              // Axon pearls – tiny emissive pulses traveling along the curve
+              const pearlCount = 3 + Math.floor(Math.random() * 3);
+              for (let i = 0; i < pearlCount; i++) {
+                const pearlGeo = new THREE.SphereGeometry(1.8, 16, 16);
+                const pearlMat = new THREE.MeshBasicMaterial({
+                  color: blended.clone().lerp(new THREE.Color("#ffffff"), 0.7),
+                  transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, depthWrite: false
+                });
+                const pearl = new THREE.Mesh(pearlGeo, pearlMat);
+                pearl.userData = {
+                  curve,
+                  t: Math.random(),
+                  speed: 0.15 + Math.random() * 0.25
+                };
+                pearlsGroup.add(pearl);
+              }
+
+              createdConnections.add(key);
+            });
+          }
+        }
+
+        drawConnections();
+
+        const infoCard = document.getElementById("infoCard");
+        const infoMetricsList = document.getElementById("infoMetrics");
+        const defaultSubtitle = "Select a Stream Category";
+        const defaultIntroText =
+            "Explore the connective tissue of Visible Light AI's intelligence streams. Click any galaxy to learn how each stream powers the constellation of insights.";
+
+        function appendMetric(list, title, detail) {
+            if (!list) return;
+            const item = document.createElement("li");
+            const heading = document.createElement("strong");
+            heading.textContent = title;
+            const value = document.createElement("span");
+            value.textContent = detail;
+            item.append(heading, value);
+            list.appendChild(item);
+        }
+
+        function updateInfoCard(data) {
+            if (!infoCard) {
+                return;
+            }
+
+            if (!data) {
+                infoCard.querySelector("h1").textContent = "Visible Light AI Supercluster";
+                infoCard.querySelector("h2").textContent = defaultSubtitle;
+                infoCard.querySelector("p").textContent = defaultIntroText;
+                if (infoMetricsList) {
+                    infoMetricsList.innerHTML = "";
+                    if (constellationData) {
+                        appendMetric(infoMetricsList, "Status", `Connected to VL Hub - ${constellationData.total_clients} clients`);
+                        appendMetric(infoMetricsList, "License", licenseKey ? `${licenseKey.substring(0, 8)}...` : "No license key");
+                    } else if (dataFetchError) {
+                        appendMetric(infoMetricsList, "Status", `Connection failed: ${dataFetchError}`);
+                        appendMetric(infoMetricsList, "Retry", "Refreshing in 30 seconds...");
+                    } else {
+                        appendMetric(infoMetricsList, "Status", "Connecting to VL Hub...");
+                    }
+                }
+                infoCard.classList.remove("visible");
+                requestAnimationFrame(() => infoCard.classList.add("visible"));
+                return;
+            }
+
+            infoCard.querySelector("h1").textContent = data.name;
+            const subtitleParts = ["Stream Category"];
+            if (data.metrics?.categoryName) {
+                subtitleParts.unshift(data.metrics.categoryName);
+            }
+            if (data.metrics?.clientName) {
+                subtitleParts.push(data.metrics.clientName);
+            }
+            infoCard.querySelector("h2").textContent = subtitleParts.join(" • ");
+            infoCard.querySelector("p").textContent = data.description;
+
+            if (infoMetricsList) {
+                infoMetricsList.innerHTML = "";
+                if (data.metrics) {
+                    appendMetric(
+                        infoMetricsList,
+                        "Signals",
+                        data.metrics.nodesCount != null ? `${data.metrics.nodesCount} active` : "Awaiting telemetry"
+                    );
+                    const topNodes = Array.isArray(data.metrics.topNodes) ? data.metrics.topNodes : [];
+                    topNodes.slice(0, 4).forEach((node) => {
+                        appendMetric(infoMetricsList, node.label, node.detail);
+                    });
+                    if (!topNodes.length) {
+                        appendMetric(infoMetricsList, "Insight", "Awaiting telemetry from VL Hub.");
+                    }
+                } else {
+                    appendMetric(infoMetricsList, "Insight", "Awaiting telemetry from VL Hub.");
+                }
+            }
+
+            infoCard.classList.add("visible");
+        }
+
+        let hoveredGalaxy = null;
+        let activeGalaxy = null;
+
+        function setGalaxyGlow(name, intensity) {
+          const entry = galaxyGroups.get(name);
+          if (!entry) return;
+
+          // Mother
+          entry.core.material.emissiveIntensity = 1.1 + intensity * 1.6;
+          entry.halo.material.opacity = 0.18 + intensity * 0.5;
+          if (entry.disc)  entry.disc.material.opacity  = 0.22 + intensity * 0.4;
+          if (entry.orbit) entry.orbit.material.opacity = 0.16 + intensity * 0.34;
+          if (entry.pointLight) {
+            entry.pointLight.intensity = 2.6 + intensity * 3.0;
+            entry.pointLight.distance  = 560 + intensity * 200;
+          }
+
+          // Children
+          (entry.children || []).forEach(ch => {
+            const m = ch.material;
+            if (m && m.emissive) {
+              m.emissiveIntensity = 0.85 + intensity * 1.3;
+            }
+            const halo = ch.children.find(n => n.geometry && n.material && n.material.transparent);
+            if (halo && halo.material) {
+              halo.material.opacity = 0.16 + intensity * 0.35;
+              halo.material.needsUpdate = true;
+            }
+            const sparkle = ch.children.find(n => n.isPoints);
+            if (sparkle && sparkle.material) {
+              sparkle.material.opacity = 0.38 + intensity * 0.42;
+              sparkle.material.needsUpdate = true;
+            }
+          });
+        }
+
+        function onPointerMove(event) {
+            const rect = renderer.domElement.getBoundingClientRect();
+            if (!rect.width || !rect.height) {
+                return;
+            }
+            pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            pointer.y = -(((event.clientY - rect.top) / rect.height) * 2 - 1);
+        }
+
+        function onClick() {
+            raycaster.setFromCamera(pointer, camera);
+            const intersects = raycaster.intersectObjects(
+                Array.from(galaxyGroups.values()).map((entry) => entry.core),
+                false
+            );
+
+            if (intersects.length > 0) {
+                const name = galaxyData.find((g) => galaxyGroups.get(g.name).core === intersects[0].object)?.name;
+                if (name) {
+                    if (activeGalaxy && activeGalaxy !== name) {
+                        setGalaxyGlow(activeGalaxy, 0);
+                    }
+                    activeGalaxy = name;
+                    setGalaxyGlow(name, 1);
+                    updateInfoCard(galaxyData.find((g) => g.name === name));
+                    highlightConnections(name);
+                }
+            } else if (activeGalaxy) {
+                setGalaxyGlow(activeGalaxy, 0);
+                activeGalaxy = null;
+                updateInfoCard(null);
+                highlightConnections(null);
+            }
+        }
+
+        function highlightConnections(name) {
+            connectionLines.children.forEach((child) => {
+                const material = child.material;
+                if (material?.uniforms) {
+                    material.uniforms.uColor.value.copy(child.userData.baseColor ?? connectionBaseColor);
+                    material.uniforms.uHighlight.value = 0;
+                    child.userData.targetOpacity = child.userData.baseOpacity ?? material.uniforms.uOpacity.value;
+                }
+            });
+
+            galaxyData.forEach((data) => {
+                const entry = galaxyGroups.get(data.name);
+                if (!entry) return;
+                entry.label.classList.remove("active");
+                if (data.name !== activeGalaxy && data.name !== hoveredGalaxy) {
+                    setGalaxyGlow(data.name, 0);
+                }
+            });
+
+            if (!name) {
+                return;
+            }
+
+            const sourceData = galaxyData.find((g) => g.name === name);
+            if (!sourceData) return;
+
+            const related = new Set([name, ...sourceData.connections]);
+            connectionLines.children.forEach((child) => {
+                const { start, end } = child.userData;
+                if (related.has(start) && related.has(end)) {
+                    const highlightEntry = galaxyGroups.get(name);
+                    if (highlightEntry && child.material?.uniforms) {
+                        child.material.uniforms.uColor.value.copy(highlightEntry.core.material.color);
+                        child.userData.targetOpacity = Math.min(1, (child.userData.baseOpacity || 0.36) + 0.55);
+                    }
+                }
+            });
+
+            related.forEach((labelName) => {
+                const entry = galaxyGroups.get(labelName);
+                if (!entry) return;
+                entry.label.classList.add("active");
+                if (labelName !== name && labelName !== hoveredGalaxy) {
+                    setGalaxyGlow(labelName, 0.35);
+                }
+            });
+        }
+
+        window.addEventListener("pointermove", onPointerMove);
+        window.addEventListener("click", onClick);
+
+        const clusterMovePercent = 0.05;
+        const zoomStepPercent = 0.1;
+        let customAnimationActive = false;
+        let customAnimationPaused = false;
+        let customAnimationPhase = 0;
+
+        const leftControl = document.getElementById("controlLeft");
+        const rightControl = document.getElementById("controlRight");
+        const zoomInControl = document.getElementById("controlZoomIn");
+        const zoomOutControl = document.getElementById("controlZoomOut");
+        const animateControl = document.getElementById("controlAnimate");
+        const connectionsControl = document.getElementById("controlConnections");
+
+        function panCluster(direction) {
+            camera.getWorldDirection(cameraDirection);
+            panRight.crossVectors(cameraDirection, camera.up);
+            if (panRight.lengthSq() === 0) {
+                return;
+            }
+
+            const distance = camera.position.distanceTo(controls.target);
+            const delta = distance * clusterMovePercent * direction;
+            panRight.normalize().multiplyScalar(delta);
+
+            camera.position.add(panRight);
+            controls.target.add(panRight);
+            controls.update();
+            updateLabels();
+        }
+
+        function zoomCluster(amount) {
+            zoomOffset.subVectors(camera.position, controls.target);
+            const currentDistance = zoomOffset.length();
+            if (currentDistance === 0) {
+                zoomOffset.set(0, 0, 1);
+            }
+
+            const targetDistance = THREE.MathUtils.clamp(
+                zoomOffset.length() * (1 + amount),
+                controls.minDistance,
+                controls.maxDistance
+            );
+
+            zoomOffset.setLength(targetDistance);
+            camera.position.copy(controls.target).add(zoomOffset);
+            controls.update();
+            updateLabels();
+        }
+
+        leftControl?.addEventListener("click", () => {
+            panCluster(-1);
+        });
+
+        rightControl?.addEventListener("click", () => {
+            panCluster(1);
+        });
+
+        zoomInControl?.addEventListener("click", () => {
+            zoomCluster(-zoomStepPercent);
+        });
+
+        zoomOutControl?.addEventListener("click", () => {
+            zoomCluster(zoomStepPercent);
+        });
+
+        function toggleCustomAnimation() {
+            customAnimationActive = !customAnimationActive;
+            if (!customAnimationActive) {
+                customAnimationPhase = 0;
+                customAnimationPaused = false;
+                animateControl?.classList.remove("paused");
+            }
+            if (animateControl) {
+                animateControl.classList.toggle("active", customAnimationActive);
+                animateControl.setAttribute("aria-pressed", String(customAnimationActive));
+                const label = animateControl.querySelector(".label");
+                if (label) {
+                    label.textContent = customAnimationActive ? "Animating" : "Animate";
+                }
+            }
+        }
+
+        animateControl?.addEventListener("click", () => {
+            toggleCustomAnimation();
+        });
+
+        animateControl?.addEventListener("mouseenter", () => {
+            if (!customAnimationActive) return;
+            customAnimationPaused = true;
+            animateControl.classList.add("paused");
+        });
+
+        animateControl?.addEventListener("mouseleave", () => {
+            if (!customAnimationActive) return;
+            customAnimationPaused = false;
+            animateControl.classList.remove("paused");
+        });
+
+        if (connectionsControl) {
+            connectionsControl.dataset.state = "shown";
+            connectionsControl.setAttribute("aria-pressed", "false");
+            connectionsControl.addEventListener("click", () => {
+                connectionsVisible = !connectionsVisible;
+                connectionLines.visible = connectionsVisible;
+                connectionsControl.dataset.state = connectionsVisible ? "shown" : "hidden";
+                connectionsControl.classList.toggle("active", !connectionsVisible);
+                connectionsControl.setAttribute("aria-pressed", String(!connectionsVisible));
+                const label = connectionsControl.querySelector(".label");
+                if (label) {
+                    label.textContent = connectionsVisible ? "Hide Connections" : "Show Connections";
+                }
+            });
+        }
+
+        connectionLines.visible = connectionsVisible;
+
+        function updateLabels() {
+            const rect = renderer.domElement.getBoundingClientRect();
+            const width = rect.width;
+            const height = rect.height;
+            if (!width || !height) {
+                return;
+            }
+
+            galaxyData.forEach((data) => {
+                const entry = galaxyGroups.get(data.name);
+                if (!entry) return;
+                entry.group.getWorldPosition(tempWorldPosition);
+                projectedPosition.copy(tempWorldPosition).project(camera);
+                const x = (projectedPosition.x * 0.5 + 0.5) * width;
+                const y = (-projectedPosition.y * 0.5 + 0.5) * height;
+                const isVisible = projectedPosition.z > -1 && projectedPosition.z < 1;
+                entry.label.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+                entry.label.style.opacity = isVisible
+                    ? entry.label.classList.contains("active")
+                        ? 1
+                        : 0.7
+                    : 0;
+            });
+        }
+
+        let previousTime = 0;
+
+        function animate(time) {
+            requestAnimationFrame(animate);
+            controls.update();
+            
+            // Debug: Check if animate is running
+            if (time % 1000 < 16) { // Log roughly once per second
+                console.log('Animation running, time:', time);
+            }
+
+            const deltaMs = time - (previousTime || time);
+            previousTime = time;
+            const deltaSeconds = deltaMs > 0 ? deltaMs * 0.001 : 0;
+
+            const t = time * 0.00012;
+
+            if (customAnimationActive) {
+                if (!customAnimationPaused) {
+                    customAnimationPhase += 0.0045;
+                }
+                const swingX = Math.sin(customAnimationPhase * 0.55) * 0.18;
+                const swingZ = Math.cos(customAnimationPhase * 0.45) * 0.14;
+                const lift = Math.sin(customAnimationPhase) * 18;
+                superclusterGroup.rotation.x = swingX;
+                superclusterGroup.rotation.z = swingZ;
+                superclusterGroup.position.y = lift;
+            }
+
+            const idleTilt = Math.sin(time * 0.00018) * 0.06;
+            const idleLift = Math.sin(time * 0.00012) * 8;
+            if (!customAnimationActive) {
+                superclusterGroup.rotation.x = THREE.MathUtils.lerp(superclusterGroup.rotation.x, idleTilt, 0.04);
+                superclusterGroup.rotation.z = THREE.MathUtils.lerp(superclusterGroup.rotation.z, idleTilt * 0.45, 0.04);
+                superclusterGroup.position.y = THREE.MathUtils.lerp(superclusterGroup.position.y, idleLift, 0.06);
+            }
+
+            superclusterGroup.rotation.y += 0.00006 + (customAnimationActive && !customAnimationPaused ? 0.00005 : 0.00002);
+            atmosphereShell.rotation.y += 0.00001;
+
+            starField.rotation.y += 0.00005;
+            starField.rotation.x = Math.sin(time * 0.00006) * 0.05;
+            farStarField.rotation.y += 0.000015;
+            farStarField.rotation.x = Math.sin(time * 0.00003) * 0.03;
+
+            nebulaClouds.forEach((cloud, idx) => {
+                const data = cloud.userData || {};
+                const phase = time * 0.00008 + (data.phaseOffset || 0) + idx * 0.1;
+                const basePosition = data.basePosition || cloud.position;
+                const drift = data.drift || { x: 0, y: 0, z: 0 };
+                const driftX = drift.x || 0;
+                const driftY = drift.y || 0;
+                const driftZ = drift.z || 0;
+                cloud.position.x = basePosition.x + Math.sin(phase) * driftX;
+                cloud.position.y = basePosition.y + Math.cos(phase * 0.8) * driftY;
+                cloud.position.z = basePosition.z + Math.sin(phase * 1.2) * driftZ;
+                cloud.rotation.z += data.rotationSpeed || 0.00008;
+                const osc = Math.sin(phase * 1.6);
+                const flicker = 0.55 + 0.45 * osc * osc;
+                if (cloud.material) {
+                    cloud.material.opacity = (data.baseOpacity || cloud.material.opacity) * flicker;
+                }
+            });
+
+            galaxyData.forEach((data, idx) => {
+                const entry = galaxyGroups.get(data.name);
+                if (!entry) return;
+                
+                // Animate children (mini-galaxies)
+                if (entry.children) {
+                    entry.children.forEach((child, childIdx) => {
+                        child.rotation.y += 0.00028 + (idx + childIdx) * 0.00002;
+                        child.rotation.x += 0.00012;
+                        if (customAnimationActive && !customAnimationPaused) {
+                            child.rotation.z += 0.00025;
+                        }
+                        
+                        // Animate child sparkles
+                        const sparkle = child.children.find(n => n.isPoints);
+                        if (sparkle) {
+                            const spinSpeed = sparkle.userData?.spinSpeed || 0.00032;
+                            sparkle.rotation.z += spinSpeed;
+                        }
+                    });
+                }
+                
+                // Animate core components
+                if (entry.disc) {
+                    entry.disc.rotation.z += 0.00012;
+                    entry.disc.rotation.x = Math.PI / 2 + Math.sin(time * 0.00024 + idx) * 0.08;
+                }
+                if (entry.orbit) {
+                    entry.orbit.rotation.z -= 0.00008;
+                }
+                
+                const pulseScale = customAnimationActive
+                    ? 1 + Math.sin(customAnimationPhase * 1.4 + idx) * 0.08
+                    : 1;
+                entry.core.scale.setScalar(pulseScale);
+                const haloPulse = customAnimationActive
+                    ? Math.sin(customAnimationPhase + idx) * 0.08
+                    : 0;
+                entry.halo.scale.setScalar(1.18 + Math.sin(t + idx) * 0.02 + haloPulse);
+            });
+
+            connectionFlowEntries.forEach((mesh) => {
+                const material = mesh.material;
+                if (!material?.uniforms) return;
+                const speed = mesh.userData?.flowSpeed || 0.14;
+                material.uniforms.uTime.value = (material.uniforms.uTime.value + deltaSeconds * speed) % 1;
+                const targetOpacity = mesh.userData?.targetOpacity ?? mesh.userData?.baseOpacity ?? material.uniforms.uOpacity.value;
+                material.uniforms.uOpacity.value = THREE.MathUtils.lerp(material.uniforms.uOpacity.value, targetOpacity, 0.08);
+                material.uniforms.uPulse.value = 0.25 + 0.25 * Math.sin(time * 0.0015);
+            });
+
+            // Move axon pearls along their curves
+            {
+              const pearls = connectionLines.getObjectByName("axonPearls");
+              if (pearls) {
+                pearls.children.forEach(p => {
+                  const u = p.userData;
+                  if (!u || !u.curve) return;
+                  u.t = (u.t + deltaSeconds * u.speed) % 1;
+                  const pos = u.curve.getPointAt(u.t);
+                  p.position.copy(pos);
+                  // subtle breathing/size flicker
+                  const s = 0.9 + 0.3 * Math.sin((u.t + time*0.0009) * Math.PI * 2.0);
+                  p.scale.setScalar(s);
+                });
+              }
+            }
+
+            raycaster.setFromCamera(pointer, camera);
+            const intersects = raycaster.intersectObjects(
+                Array.from(galaxyGroups.values()).map((entry) => entry.core),
+                false
+            );
+
+            if (intersects.length > 0) {
+                const name = galaxyData.find((g) => galaxyGroups.get(g.name).core === intersects[0].object)?.name;
+                if (name && name !== hoveredGalaxy) {
+                    if (hoveredGalaxy && hoveredGalaxy !== activeGalaxy) {
+                        setGalaxyGlow(hoveredGalaxy, 0);
+                    }
+                    hoveredGalaxy = name;
+                    if (name !== activeGalaxy) {
+                        setGalaxyGlow(name, 0.6);
+                    }
+                }
+            } else if (hoveredGalaxy && hoveredGalaxy !== activeGalaxy) {
+                const previous = hoveredGalaxy;
+                setGalaxyGlow(previous, 0);
+                hoveredGalaxy = null;
+                if (activeGalaxy) {
+                    highlightConnections(activeGalaxy);
+                }
+            }
+
+            updateLabels();
+            renderer.render(scene, camera);
+            
+            // Debug: Check if render is working
+            if (time % 2000 < 16) { // Log roughly every 2 seconds
+                console.log('Rendering scene with', scene.children.length, 'children');
+            }
+        }
+
+        // Initialize the application
+        updateInfoCard(null);
+        
+        // Add debugging for Three.js initialization
+        console.log('Starting Supercluster initialization...');
+        console.log('Root container:', rootContainer);
+        console.log('License key from URL:', licenseKey);
+        console.log('Three.js version:', THREE.REVISION);
+        console.log('Renderer:', renderer);
+        console.log('Scene children count:', scene.children.length);
+
+
+        animate(0);
+
+        window.addEventListener("resize", () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            updateLabels();
+        });
+
+        setTimeout(() => {
+            const infoCard = document.getElementById('infoCard');
+            if (infoCard) {
+                infoCard.classList.add("visible");
+            }
+        }, 600);
+    </script>
+</body>
